@@ -17,7 +17,7 @@ export default function Home() {
           </div>
           <nav className="flex flex-wrap justify-end gap-2 text-[11px] font-medium text-slate-900">
             <Link
-              href="/pitch-deck"
+              href="/pitch"
               className="rounded-full bg-[#cededb] px-3 py-1 hover:bg-[#b8cbc7]"
             >
               Pitch deck
@@ -88,7 +88,7 @@ export default function Home() {
                 See the web UI demo
               </Link>
               <Link
-                href="/pitch-deck"
+                href="/pitch"
                 className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-800 ring-1 ring-[#cededb] hover:bg-slate-50"
               >
                 View the pitch deck 

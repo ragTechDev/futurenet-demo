@@ -44,6 +44,11 @@ Basic rules:
 
 You can safely change the text and add/remove slides by editing this file.
 
+After you save changes to `slides.md`, go back to the browser and **refresh the page** to see your updates. If the changes don’t appear, use a **hard refresh**:
+
+- Windows: `Ctrl + Shift + R` (or `Ctrl + F5`)
+- Mac: `Cmd + Shift + R`
+
 ## 4. How to run the pitch deck in your browser
 
 Every time you want to **present** or **preview** the deck:
