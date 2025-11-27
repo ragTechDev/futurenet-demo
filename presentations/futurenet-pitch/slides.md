@@ -59,3 +59,7 @@ built on private networking + safety-first UI.
 - **Microsoft**: $25M
 
 ---
+A kids-first phone inspired by Japan's Keitai,
+built on private networking + safety-first UI.
+
+---
