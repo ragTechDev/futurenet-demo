@@ -131,7 +131,6 @@ For easier navigation, here are links to the main project folders and documentat
 | **Design** | All design documentation | [docs/design]docs/design) |
 | **Wireframes (Low-Fidelity)** | PlantUML/SALT wireframes. | [docs/design/wireframes/low-fidelity/README.md](docs/design/wireframes/low-fidelity/README.md) |
 
-
 > Tip: Always refer to the relevant README in each folder for detailed instructions and workflow.
 
 ---
@@ -143,3 +142,18 @@ If you’d like to contribute (including as a non-coder or first-time contributo
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 
 This guide walks through setting up your environment, cloning the repo, running the app locally, and opening your first pull request with links to official GitHub documentation.
+
+## 🖥️ Pitch Deck (Quick Start)
+
+Follow the setup instructions in the [CONTRIBUTING.md](CONTRIBUTING.md) guide. 
+
+- **Run the pitch deck**:
+
+  ```bash
+  npm run pitch
+  ```
+
+  This will open the FutureNet pitch deck in your browser.
+
+- **Full, non‑technical guide** (how to edit slides, export PDF, and print):  
+  See [`presentations/futurenet-pitch/README.md`](presentations/futurenet-pitch/README.md).
