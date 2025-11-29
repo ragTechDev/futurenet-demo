@@ -6,8 +6,8 @@ The purpose of this demo is to **visualize the UI/UX direction**, validate inter
 
 This project is part of the larger vision to build a **digital village (kampung)** for children — a safe environment that promotes responsible technological growth.
 
-<img width="841" height="581" alt="image" src="https://github.com/user-attachments/assets/88e28474-772d-47bf-ac1d-4d8b147f49bd" />
-<img width="822" height="382" alt="image" src="https://github.com/user-attachments/assets/88867fa8-2e78-4862-b8a7-54e7eca1e50a" />
+<img width="841" height="581" alt="image" src="docs\images\landing1.png" />
+<img width="822" height="382" alt="image" src="docs\images\landing2.png" />
 
 
 ---
@@ -37,9 +37,9 @@ This repo contains the **Web UI Demo** for these prototypes.
 
 > ⚠ This demo is UI-only — no real messaging, networking, or OS features are implemented yet.
 
-<img width="351" height="613" alt="image" src="https://github.com/user-attachments/assets/7e49d756-1b92-4df2-a1b0-2a15a7035b8c" />
-<img width="335" height="533" alt="image" src="https://github.com/user-attachments/assets/8d67b6d4-ed61-4463-b7d1-d9d513e211e6" />
-<img width="337" height="533" alt="image" src="https://github.com/user-attachments/assets/67000c03-b987-4a50-9830-0aace40e6257" />
+<img width="351" height="613" alt="image" src="docs\images\lockscreen.png" />
+<img width="335" height="533" alt="image" src="docs\images\homescreen.png" />
+<img width="337" height="533" alt="image" src="docs\images\emergency.png" />
 
 ---
 
