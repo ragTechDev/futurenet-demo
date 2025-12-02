@@ -15,14 +15,13 @@
 | This is Sugi. | Kochira wa Sugi-san desu. | こちらはスギさんです。 |
 | This is Saloni. | Kochira wa Saroni-san desu. | こちらはサロニさんです。 |
 | This is Jackson. | Kochira wa Jakuson-san desu. | こちらはジャクソンさんです。 |
+| This is Rob from Tokyo, who is a Japanese speaker and will help us interpret our questions to you. | Kochira wa Tōkyō kara sanka shite iru Robu-san desu. Nihongo o hanasu koto ga dekite, watashitachi no shitsumon no tsūyaku o tetsudatte kudasimasu. | こちらは東京から参加しているロブさんです。日本語を話すことができて、私たちの質問の通訳を手伝ってくださいます。 |
 | We are working together as a research team called Futurenet. | “Fyūchā Netto” to iu risāchi chīmu toshite katsudō shiteimasu. | 「フューチャーネット」というリサーチチームとして活動しています。 |
 | We are very excited to learn from you about NTT Docomo’s Kids Keitai. | NTT Dokomo no Kids Keitai ni tsuite ohanashi o ukagaeru koto o, totemo tanoshimi ni shite orimasu. | NTTドコモのキッズケータイについてお話を伺えることを、とても楽しみにしております。 |
 | As I do not speak Japanese, I will be using a live interpretation tool. | Nihongo o hanasu koto ga dekinai tame, raibu tsūyaku tsūru o shiyō sasete itadakimasu. | 日本語を話すことができないため、ライブ通訳ツールを使用させていただきます。 |
 | So I may take a little time to respond — thank you for your patience. | Sukoshi jikan ga kakaru kamoshiremasen ga, dōka goyōsha kudasai. | 少し時間がかかるかもしれませんが、どうかご容赦ください。 |
 | May I record the session for transcription? Personal information will not be included. | Nochihodo naiyō o seiri suru tame ni rokuga sasete itadakitai no desu ga, kojin jōhō wa issai shiyō itashimasen. Rokuga shite mo yoroshii deshō ka? | 後ほど内容を整理するために録画させていただきたいのですが、個人情報は一切使用いたしません。録画してもよろしいでしょうか？ |
-
-
-
+| I will hand over now to Rob to help us ask the first question. Thank you, Rob! | Sore dewa, saisho no shitsumon o suru tameに Robu-san ni baton o watashimasu. Robu-san, yoroshiku onegaishimasu! | それでは、最初の質問をするためにロブさんにバトンを渡します。ロブさん、よろしくお願いします！ |
 
 | # | English | Romaji | Japanese |
 |---|---------|--------|----------|
