@@ -1,0 +1,58 @@
+# 🎤 Interview Questions — Kids Keitai (DOCOMO)  
+## Interview Introduction (Japanese + Romaji)
+
+| English | Romaji | Japanese |
+|---------|--------|----------|
+| I do not speak Japanese, but I learned this greeting to express my gratitude. | Nihongo wa hanasemasen ga, kansha no kimochi o tsutaeru tame ni kono aisatsu o renshū shimashita. | 日本語は話せませんが、感謝の気持ちを伝えるためにこのあいさつを練習しました。 |
+| Nice to meet you, and thank you very much for taking the time to speak with us today. | Honjitsu wa ojikan o itadaki, makoto ni arigatō gozaimasu. Hajimemashite. | 本日はお時間をいただき、誠にありがとうございます。はじめまして。 |
+| I am very grateful to Shirakawa-san for arranging this meeting. | Kono mendan o settei shite kudasatta Shirakawa-san ni mo fukaku kansha mōshiagemasu. | この面談を設定してくださった白川さんにも深く感謝申し上げます。 |
+| My name is Natasha. I work as a software engineer in Singapore. | Watashi wa Natasha to mōshimasu. Shingapōru de sofutowea enjiniā toshite hataraite orimasu. | 私はナターシャと申します。シンガポールでソフトウェアエンジニアとして働いております。 |
+| I also lead a community called Women in Tech. | “Women in Tech” (Uimen in Tekku) to iu komyuniti o un’ei shite orimasu. | 「Women in Tech（ウィメン・イン・テック）」というコミュニティを運営しております。 |
+| It is a technology community that supports women. | Josei no tame no tekunorojī komyuniti desu. | 女性のためのテクノロジーコミュニティです。 |
+| I became a mother one year ago, and together with other parents who work in technology, we are concerned about internet safety for children. | Ichinen mae ni musuko ga umare, onajiku gijutsu-shadearu hogo-sha no nakama-tachi to, kodomo no intānetto anzen ni tsuite tsuyoi kanshin o motsu yō ni narimashita. | 一年前に息子が生まれ、同じく技術者である保護者の仲間たちと、子どものインターネット安全について強い関心を持つようになりました。 |
+| Two weeks ago, we started a small team called Futurenet to explore creating a safe digital environment for children. | Sokode nishūkanmae ni `Futurenet' to iu chīsana chīmu o tachi age, kodomo-tachi ga anzen ni debaisu ya intānetto o tsukaeru kankyō-dzukuri o kenkyū shi hajimemashita. | そこで二週間前に「Futurenet」という小さなチームを立ち上げ、子どもたちが安全にデバイスやインターネットを使える環境づくりを研究し始めました。 |
+| I would also like to introduce the other members of our team who are joining the call today. | Honjitsu no mītingu ni wa, chīmu no menbā mo sanka shite orimasu. | 本日のミーティングには、チームのメンバーも参加しております。 |
+| This is Sugi. | Kochira wa Sugi-san desu. | こちらはスギさんです。 |
+| This is Saloni. | Kochira wa Saroni-san desu. | こちらはサロニさんです。 |
+| This is Jackson. | Kochira wa Jakuson-san desu. | こちらはジャクソンさんです。 |
+| We are working together as a research team called Futurenet. | “Fyūchā Netto” to iu risāchi chīmu toshite katsudō shiteimasu. | 「フューチャーネット」というリサーチチームとして活動しています。 |
+| We are very excited to learn from you about NTT Docomo’s Kids Keitai. | NTT Dokomo no Kids Keitai ni tsuite ohanashi o ukagaeru koto o, totemo tanoshimi ni shite orimasu. | NTTドコモのキッズケータイについてお話を伺えることを、とても楽しみにしております。 |
+| As I do not speak Japanese, I will be using a live interpretation tool. | Nihongo o hanasu koto ga dekinai tame, raibu tsūyaku tsūru o shiyō sasete itadakimasu. | 日本語を話すことができないため、ライブ通訳ツールを使用させていただきます。 |
+| So I may take a little time to respond — thank you for your patience. | Sukoshi jikan ga kakaru kamoshiremasen ga, dōka goyōsha kudasai. | 少し時間がかかるかもしれませんが、どうかご容赦ください。 |
+| May I record the session for transcription? Personal information will not be included. | Nochihodo naiyō o seiri suru tame ni rokuga sasete itadakitai no desu ga, kojin jōhō wa issai shiyō itashimasen. Rokuga shite mo yoroshii deshō ka? | 後ほど内容を整理するために録画させていただきたいのですが、個人情報は一切使用いたしません。録画してもよろしいでしょうか？ |
+
+
+
+
+| # | English | Romaji | Japanese |
+|---|---------|--------|----------|
+| 1 | To begin, could you tell us about your role at NTT Docomo and your daily work? | Mazu hajime ni, NTT Dokomo de no go-tantō ya fudan no oshigoto ni tsuite oshiete itadakemasu ka? | まず初めに、NTTドコモでのご担当や普段のお仕事について教えていただけますか？ |
+| 2 | What are the most used apps or features on the kids keitai? | Kidzu keitai de, mottomo yoku tsukawarete iru apuri ya kinō wa nan desu ka? | キッズケータイで、もっともよく使われているアプリや機能は何ですか？ |
+| 3 | Which feature was the hardest to build or implement (in terms of safety / usability)? | Kaihatsu / sekkei no naka de, anzensei ya tsukai-yasusa no kanten kara, mottomo tsukuru no ga muzukashikatta kinō wa dore desu ka? | 開発・設計の中で、安全性や使いやすさの観点から、最も作るのが難しかった機能はどれですか？ |
+| 4 | What is the typical age range of users / customers of the kids keitai? | Yūzā (kōnyūsha / shiyōsha) no ippan-teki na nenrei sō wa dono atari desu ka? | ユーザー（購入者・使用者）の一般的な年齢層はどのあたりですか？ |
+| 5 | At what age do most children stop using the kids keitai (and perhaps move to a regular smartphone)? | Ōku no kodomo wa nan-sai goro de kidzu keitai no riyō o yame, tsūjō no sumaho ni ikō shimasu ka? | 多くの子どもは何歳ごろでキッズケータイの利用をやめ、通常のスマホに移行しますか？ |
+| 6 | Does the kids keitai have its own “app store” or download store for content? | Kidzu keitai-yō no apuri sutoa ya kontentsu haishin sutoa wa arimasu ka? | キッズケータイ用のアプリストアやコンテンツ配信ストアはありますか？ |
+| 7 | What was the biggest challenge you faced when developing the kids keitai? | Kidzu keitai no kaihatsu de, mottomo ōkina kadai wa nan deshita ka? | キッズケータイの開発で、最も大きな課題は何でしたか？ |
+| 8 | Did you face any resistance (from parents, schools, regulators)? How did you manage it? | (Hogosha, gakkō, kisei dantai nado kara no) hantai ya ken’en wa arimashita ka? Attabaai, dono yō ni taiō shimashita ka? | (保護者、学校、規制団体などからの) 反対や懸念はありましたか？あった場合、どのように対応しましたか？ |
+| 9 | What inspired you to create the kids keitai product in the first place? | Naze saisho ni kidzu keitai o tsukurou to omotta no desu ka? | なぜ最初にキッズケータイを作ろうと思ったのですか？ |
+| 10 | How did parents and users react when the product was launched? | Sābisu kaishi-ji, hogosha ya riyōsha kara dono yō na hannō ga arimashita ka? | サービス開始時、保護者や利用者からどのような反応がありましたか？ |
+| 11 | Do schools or educational institutions regulate whether children can carry/use the kids keitai? | Gakkō ya kyōiku kikan de, kodomo ga kidzu keitai o motsu / tsukau koto ni seigen ya rūru wa arimasu ka? | 学校や教育機関で、子どもがキッズケータイを持つ・使うことに制限やルールはありますか？ |
+| 12 | Why did you choose not to release the product globally (outside Japan)? | Naze kono seihin o kaigai (Nihon kokugai) ni tenkai shinai koto ni shita no desu ka? | なぜこの製品を海外（日本国外）に展開しないことにしたのですか？ |
+| 13 | If you started designing it today, is there anything you would do differently? | Moshi kyō kara sekkei shinaosu nara, nani o kaetai desu ka? | もし今日から設計し直すなら、何を変えたいですか？ |
+| 14 | What feedback from children surprised you most? | Kodomo-tachi kara no fīdobakku de, ichiban odoroita koto wa nan desu ka? | 子どもたちからのフィードバックで、一番驚いたことは何ですか？ |
+| 15 | Do you monitor or collect usage data from the phones? If yes — what data and how do you ensure privacy? | Tanshi no riyō dēta o shūshū / kanshi shiteimasu ka? Moshi shiteiru nara, dono yō na dēta o, puraibashī hogo no tame ni dō kanri shiteimasu ka? | 端末の利用データを収集・監視していますか？もししているなら、どのようなデータを、プライバシー保護のためにどう管理していますか？ |
+| 16 | Does NTT Docomo have plans to scale the Kids Keitai globally?  Many parents around the world would love to use this! | NTTドコモは、キッズケータイを世界に展開する予定はありますか？  世界中の保護者の方々がこの製品を利用したいと思っているはずです | NTT Dokomo wa, kidzu keitai o sekai ni tenkai suru yotei wa arimasu ka? Sekaijū no hogosha no katagata ga kono seihin o riyō shitai to omotte iru hazu desu. |
+
+## Concluding remarks
+| English | Romaji | Japanese |
+|---------|--------|----------|
+| That is all the questions we have. | Ijō de shitsumon wa subete desu. | 以上で質問はすべてです。 |
+| Thank you very much for taking the time to answer them. | Go-kaitō itadaki, hontō ni arigatō gozaimashita. | ご回答いただき、本当にありがとうございました。 |
+| Our team is very grateful for your support. | Watashitachi no chīmu wa, go-shien ni taihen kansha shite orimasu. | 私たちのチームは、ご支援に大変感謝しております。 |
+| We look forward to applying what we have learned in our research. | Honjitsu ukagatta naiyō o kenkyū ni ikashite ikitai to omotte orimasu. | 本日伺った内容を研究に活かしていきたいと思っております。 |
+| We would love to keep you updated about our progress. | Kongo no shinchoku ni tsuite mo, zehi go-hōkoku sasete itadakitai desu. | 今後の進捗についても、ぜひご報告させていただきたいです。 |
+| If possible, we hope to explore opportunities for collaboration in the future. | Kanō de areba, shōraiteki na kyōryoku no kikai ni tsuite mo kentō dekireba saiwai desu. | 可能であれば、将来的な協力の機会についても検討できれば幸いです。 |
+| We will communicate through the kind support of Shirakawa-san. | Shirakawa-san no okizukai/okurazoe o itadaki nagara susumete mairimasu. | 白川さんのお力添えをいただきながら進めてまいります。 |
+| I hope to meet you in person someday and thank you directly. | Itsuka Nihon de oai shi, chokusetsu orei o mōshiagerareba to omoimasu. | いつか日本でお会いし、直接お礼を申し上げられればと思います。 |
+| Thank you very much. | Hontō ni arigatō gozaimashita. | 本当にありがとうございました。 |
+| We humbly ask for your continued support. | Kongo tomo yoroshiku onegai itashimasu. | 今後ともよろしくお願いいたします。 |
