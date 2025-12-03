@@ -6,22 +6,16 @@
 | I do not speak Japanese, but I learned this greeting to express my gratitude. | Nihongo wa hanasemasen ga, kansha no kimochi o tsutaeru tame ni kono aisatsu o renshū shimashita. | 日本語は話せませんが、感謝の気持ちを伝えるためにこのあいさつを練習しました。 |
 | Nice to meet you, and thank you very much for taking the time to speak with us today. | Honjitsu wa ojikan o itadaki, makoto ni arigatō gozaimasu. Hajimemashite. | 本日はお時間をいただき、誠にありがとうございます。はじめまして。 |
 | I am very grateful to Shirakawa-san for arranging this meeting. | Kono mendan o settei shite kudasatta Shirakawa-san ni mo fukaku kansha mōshiagemasu. | この面談を設定してくださった白川さんにも深く感謝申し上げます。 |
-| My name is Natasha. I work as a software engineer in Singapore. | Watashi wa Natasha to mōshimasu. Shingapōru de sofutowea enjiniā toshite hataraite orimasu. | 私はナターシャと申します。シンガポールでソフトウェアエンジニアとして働いております。 |
 | I also lead a community called Women in Tech. | “Women in Tech” (Uimen in Tekku) to iu komyuniti o un’ei shite orimasu. | 「Women in Tech（ウィメン・イン・テック）」というコミュニティを運営しております。 |
 | It is a technology community that supports women. | Josei no tame no tekunorojī komyuniti desu. | 女性のためのテクノロジーコミュニティです。 |
 | I became a mother one year ago, and together with other parents who work in technology, we are concerned about internet safety for children. | Ichinen mae ni musuko ga umare, onajiku gijutsu-shadearu hogo-sha no nakama-tachi to, kodomo no intānetto anzen ni tsuite tsuyoi kanshin o motsu yō ni narimashita. | 一年前に息子が生まれ、同じく技術者である保護者の仲間たちと、子どものインターネット安全について強い関心を持つようになりました。 |
 | Two weeks ago, we started a small team called Futurenet to explore creating a safe digital environment for children. | Sokode nishūkanmae ni `Futurenet' to iu chīsana chīmu o tachi age, kodomo-tachi ga anzen ni debaisu ya intānetto o tsukaeru kankyō-dzukuri o kenkyū shi hajimemashita. | そこで二週間前に「Futurenet」という小さなチームを立ち上げ、子どもたちが安全にデバイスやインターネットを使える環境づくりを研究し始めました。 |
 | I would also like to introduce the other members of our team who are joining the call today. | Honjitsu no mītingu ni wa, chīmu no menbā mo sanka shite orimasu. | 本日のミーティングには、チームのメンバーも参加しております。 |
-| This is Sugi. | Kochira wa Sugi-san desu. | こちらはスギさんです。 |
-| This is Saloni. | Kochira wa Saroni-san desu. | こちらはサロニさんです。 |
-| This is Jackson. | Kochira wa Jakuson-san desu. | こちらはジャクソンさんです。 |
-| This is Rob from Tokyo, who is a Japanese speaker and will help us interpret our questions to you. | Kochira wa Tōkyō kara sanka shite iru Robu-san desu. Nihongo o hanasu koto ga dekite, watashitachi no shitsumon no tsūyaku o tetsudatte kudasimasu. | こちらは東京から参加しているロブさんです。日本語を話すことができて、私たちの質問の通訳を手伝ってくださいます。 |
 | We are working together as a research team called Futurenet. | “Fyūchā Netto” to iu risāchi chīmu toshite katsudō shiteimasu. | 「フューチャーネット」というリサーチチームとして活動しています。 |
 | We are very excited to learn from you about NTT Docomo’s Kids Keitai. | NTT Dokomo no Kids Keitai ni tsuite ohanashi o ukagaeru koto o, totemo tanoshimi ni shite orimasu. | NTTドコモのキッズケータイについてお話を伺えることを、とても楽しみにしております。 |
 | As I do not speak Japanese, I will be using a live interpretation tool. | Nihongo o hanasu koto ga dekinai tame, raibu tsūyaku tsūru o shiyō sasete itadakimasu. | 日本語を話すことができないため、ライブ通訳ツールを使用させていただきます。 |
 | So I may take a little time to respond — thank you for your patience. | Sukoshi jikan ga kakaru kamoshiremasen ga, dōka goyōsha kudasai. | 少し時間がかかるかもしれませんが、どうかご容赦ください。 |
 | May I record the session for transcription? Personal information will not be included. | Nochihodo naiyō o seiri suru tame ni rokuga sasete itadakitai no desu ga, kojin jōhō wa issai shiyō itashimasen. Rokuga shite mo yoroshii deshō ka? | 後ほど内容を整理するために録画させていただきたいのですが、個人情報は一切使用いたしません。録画してもよろしいでしょうか？ |
-| I will hand over now to Rob to help us ask the first question. Thank you, Rob! | Sore dewa, saisho no shitsumon o suru tameに Robu-san ni baton o watashimasu. Robu-san, yoroshiku onegaishimasu! | それでは、最初の質問をするためにロブさんにバトンを渡します。ロブさん、よろしくお願いします！ |
 
 | # | English | Romaji | Japanese |
 |---|---------|--------|----------|
