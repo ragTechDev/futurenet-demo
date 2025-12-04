@@ -1,0 +1,1 @@
+Placeholder for market research on UK voice-enabled messenger, [Karri](https://karri.io/).
