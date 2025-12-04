@@ -1,0 +1,1 @@
+Place holder for [KDDI's mamorino watch](https://news.kddi.com/kddi/corporate/english/newsrelease/2016/02/04/1692.html)

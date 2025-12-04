@@ -1,0 +1,1 @@
+Placeholder for [Softbank's Mimamori](https://www.softbank.jp/mobile/support/product/mimamori-keitai4/)
