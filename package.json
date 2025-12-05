@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "pitch": "npx http-server . -o presentations/futurenet-pitch/index.html"
   },
   "dependencies": {
     "next": "16.0.4",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "reveal.js": "^5.2.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
