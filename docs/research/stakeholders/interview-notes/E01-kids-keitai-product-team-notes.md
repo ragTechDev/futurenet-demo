@@ -19,11 +19,11 @@ The meeting was an interview with the Kids Keitai Japanese team about their chil
 ## Key Discussion Points
 - Purpose: They developed a child-focused communication device to enable safe, minimal communication between children and guardians while reducing classroom disruption.
 
-- Target users: Primarily early elementary school children; many families transition around grades 4–6 as demand for full smartphones grows.
+- Target users: Primarily early elementary school children (6-10); many families transition around grades 4–6 as demand for full smartphones grows.
 
-- Core features: Phone, closed-family messaging (customized Plus Message), camera; intentionally no open app store to limit exposure to third parties and unknown contacts.
+- Core features: Phone, closed-family messaging (customized Plus Message), camera, location tracking services; intentionally no open app store to limit exposure to third parties and unknown contacts.
 
-- Safety priorities: Make incoming calls/messages more noticeable, restrict distracting functions during school time, and design with child-friendly size/appearance.
+- Safety priorities: Make incoming calls/messages more noticeable (esp Kids Compact), restrict distracting functions during school time, and design with child-friendly size/appearance.
 
 - Development challenges: Implementing reliable GPS tracking, building an Android device without Google Mobile Services, customizing messaging functionality, and managing development costs.
 
@@ -57,5 +57,15 @@ The meeting was an interview with the Kids Keitai Japanese team about their chil
 
 - Schedule a follow-up meeting (Natasha's Sendai contact to send email of the kids keitai team) to share progress and explore potential collaboration opportunities.
 
+- Research into Android OS and Google Mobile Services
+
+- Look into [Plus Messenger](https://plusmessenger.org/)
+
 - Discuss next steps on collaboration
+
+## Follow up questions
+- Are there many false alarms on the alarm?
+- Are there success stories on the emergency feature? (Might offend? haha)
+- How did you balance battery drainage with GPS location?
+- Why Plus Messenger and not just normal SMS?
 
