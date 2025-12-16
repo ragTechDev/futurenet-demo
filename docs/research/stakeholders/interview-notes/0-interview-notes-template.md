@@ -4,6 +4,7 @@
 | Field | Notes |
 |-------|--------|
 | Stakeholder type | (Parent / Teacher / Student / Admin / Expert) |
+| Ethnic Background | |
 | Age group | |
 | Interview date | |
 | Interviewer | |

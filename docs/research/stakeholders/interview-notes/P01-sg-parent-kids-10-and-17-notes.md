@@ -3,7 +3,8 @@
 ## Participant Info
 | Field | Notes |
 |-------|--------|
-| Stakeholder type | Parent of children aged 10 and 17 |
+| Stakeholder type | Parent (Mum) of children aged 10 and 17 |
+| Ethnic Background | Indian, migrated to SG due to spouse's work, currently also working in SG tech |
 | Age group | 35-45 |
 | Interview date | 3 Dec 2024 |
 | Interviewer | Natasha |
@@ -13,6 +14,7 @@
 
 ## Key Discussion Points
 ### Current Behaviors
+- Software engineer parent, tech-savvy
 - Uses Parents Gateway (MOE) for consent forms and advisories; multiple children can be registered.
 - Intentionally curates children’s digital exposure: preferred TV/Netflix over YouTube; limited early YouTube access.
 - Uses Apple Family ecosystem (parental supervision, app subscriptions, contact limits).
@@ -20,6 +22,7 @@
 - Location tracking tried (Life360) but removed due to battery drain and child switching it off.
 - WhatsApp used by younger child for school socialising; parent uneasy about lack of parental controls.
 - COVID increased screen time and normalized more TV/device use for younger child.
+- Reads to child daily, finds reading helpful for kids
 
 ### Pain Points / Frustrations
 - Parents Gateway search is poor for relevant topics (e.g., screen time).
