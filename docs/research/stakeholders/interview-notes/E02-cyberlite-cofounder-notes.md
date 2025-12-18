@@ -18,7 +18,7 @@
 - Works with 200+ primary and secondary schools in Singapore
 - Expanding to Asia Pacific region (e.g., Bangalore with 1k schools)
 - Targets age ranges 7-17 years, with working group for 2-6 years
-- Segments content by age groups: 7-9, 10-12, 13-15, 15-17
+- Segments content by age groups: 7-9, 10-12, 13-15, 15-17, considering including 2-6 due to increase prevalance of kids being exposted at this age
 - Networks extensively globally to build partnerships
 - Collaborates with government agencies (IMDA) and corporate sponsors (Palo Alto Networks, Microsoft)
 
@@ -98,7 +98,7 @@
 
 ## Follow-Ups
 - What specific metrics does Cyberlite track for workshop effectiveness?
-- How does the content differ across the age segments (7-9, 10-12, 13-15, 15-17)?
+- How does the content differ across the age segments (2-6, 7-9, 10-12, 13-15, 15-17)?
 - What are the key components of the AI toolkit developed for Microsoft?
 - How does the school-to-home education model work in practice?
 - What are the most common misconceptions parents have about online safety?
