@@ -3,7 +3,7 @@
 ## Participant Info
 | Field | Notes |
 |-------|--------|
-| Stakeholder type | Expert, Kids' Keitai Product Team |
+| Stakeholder type | Expert, NTT Docomo Kids' Keitai Product Team |
 | Age group | 25-35 |
 | Interview date | 3 Dec 2025 |
 | Interviewer | Natasha, Saloni, Sugirdha, Jackson |
