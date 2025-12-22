@@ -23,6 +23,7 @@
 - They also disable smartwatch's communication features when they know he's at school so he doesn't get distracted by it. There was a time where they didn't and they can remotely see he was actively texting his friends from the smartwatch at school.
 - Allows Netflix at home as long as they watch in the living room and asks for permission before watching PG13 movies.
 - Allows PC usage for homework but he has to keep the door open for supervision. Parents still check browsing history after use.
+- Trying to pitch to school to not bring phones to school because she doesn't think it's necessary.
 
 ### Pain Points / Frustrations
 - Believes there is no need to have kids use iPads in class, but the school wants to integrate technology to children early.
