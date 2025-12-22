@@ -5,14 +5,15 @@
 |-------|--------|
 | Stakeholder type | Parent (Stay at Home Mother), kid 9 and 6 years old |
 | Age group | 35–40 |
-| Interview date | 18 Dec 2025 |
+| Interview date | 19 Dec 2025 |
 | Interviewer | Victoria |
-| Consent status | Recording allowed: Yes |
+| Consent status | Recording allowed: No |
 
 ---
 
 ## Key Discussion Points
 ### Current Behaviors
+- For context, her children goes to SAS, non-MOE school.
 - Allows children to use iPad with curated apps for their homework, have to closely monitor their use.
 - Schedules time to play sports outside often by booking badminton courts, pickleball, etc.
 - Gives her 9 year old a kindle to introduce reading with a less eye straining screen rather than iPad
