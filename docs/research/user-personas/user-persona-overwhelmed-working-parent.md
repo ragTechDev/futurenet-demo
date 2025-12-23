@@ -1,9 +1,9 @@
-# User Persona – Overwhelmed Working Parent
+# User Persona – Overwhelmed Working Parent (Inferred Persona from E01)
 
 ## Basic Profile
 | Attribute | Description |
 |-----------|-------------|
-| Name | “Jasmine Tan” (representative) |
+| Name | “Jasmine Tan” (Inferred persona from E01) |
 | Age | 35–45 |
 | School Level | Parent of a child in Primary 4–6 (10–12) or Secondary 1–2 (13–15) |
 | Tech Proficiency | Medium |

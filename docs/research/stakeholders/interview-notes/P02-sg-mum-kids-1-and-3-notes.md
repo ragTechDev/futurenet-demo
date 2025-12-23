@@ -5,6 +5,7 @@
 |-------|--------|
 | Stakeholder type | Parent (Mother), kids 1 and 3 years old |
 | Age group | 25–35 |
+| Ethnic Background | Chinese, migrated from China to US and now SG due to spouse's work as professor, now trying to build venture at Antler |
 | Interview date | 15 Dec 2025 |
 | Interviewer | Victoria, Natasha |
 | Consent status | Recording allowed: Yes |
