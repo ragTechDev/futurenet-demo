@@ -1,0 +1,27 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" class="doodleSvg">
+  <g fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Screen -->
+    <rect x="200" y="180" width="400" height="260" rx="40" ry="40"/>
+
+    <!-- Cute face on screen -->
+    <circle cx="340" cy="300" r="12"/>
+    <circle cx="460" cy="300" r="12"/>
+    <path d="M360 340 C390 360, 410 360, 440 340"/>
+
+    <!-- Stand -->
+    <path d="M380 440 C370 500, 370 540, 400 560
+             C430 540, 430 500, 420 440"/>
+
+    <!-- Base -->
+    <path d="M300 580
+             C260 600, 260 640, 300 650
+             C400 670, 500 650, 500 620
+             C500 590, 460 580, 420 580"/>
+
+    <!-- Little antenna (childlike touch) -->
+    <path d="M400 180 C390 140, 420 120, 440 140"/>
+    <circle cx="440" cy="140" r="10"/>
+
+  </g>
+</svg>

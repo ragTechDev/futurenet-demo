@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Literata } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const kindleLike = Literata({ subsets: ["latin"], weight: ["400", "600"] });
 
 export const metadata: Metadata = {
-  title: "Futurenet",
-  description: "a public benefit initiative to design a safe and secure digital experience for children in their early developmental years.",
+  title: "FutureNet",
+  description:
+    "A technologist-led research initiative into the digital landscape for children, adolescents, and their parents.",
 };
 
 export default function RootLayout({
@@ -24,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${kindleLike.className} antialiased`}>
         {children}
       </body>
     </html>

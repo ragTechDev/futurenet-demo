@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 640 640">
-  <rect width="640" height="640" rx="160" fill="#f7f3ea" />
-  <g fill="none" stroke="#1a1a1a" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" class="doodleSvg">
+  <g fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
     <path d="M320 90 C240 120, 200 190, 210 250 C170 260, 150 300, 160 340 C175 400, 250 430, 300 412 C320 460, 390 492, 450 470 C520 444, 540 370, 502 325 C540 300, 552 242, 522 205 C480 155, 390 135, 320 165" />
     <path d="M318 260 C320 360, 320 450, 320 550" />
     <path d="M320 430 C280 410, 250 385, 220 350" />

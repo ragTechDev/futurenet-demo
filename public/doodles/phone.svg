@@ -1,0 +1,14 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" class="doodleSvg">
+  <g fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="280" y="160" width="240" height="460" rx="50" />
+
+    <circle cx="360" cy="300" r="12" />
+    <circle cx="440" cy="300" r="12" />
+    <path d="M370 340 C395 360, 405 360, 430 340" />
+
+    <circle cx="400" cy="580" r="14" />
+
+    <path d="M400 160 C380 120, 420 100, 440 120" />
+    <circle cx="440" cy="120" r="10" />
+  </g>
+</svg>
