@@ -83,6 +83,8 @@ export default function DigitalParentQuizPage() {
       return false;
     }
   });
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+  const [emailError, setEmailError] = useState<string | null>(null);
 
   const currentQuestion = QUESTIONS[questionIndex] ?? null;
   const totalQuestions = QUESTIONS.length;
@@ -717,17 +719,49 @@ export default function DigitalParentQuizPage() {
     setAnswers(Array.from({ length: QUESTIONS.length }, () => null));
   }
 
-  function submitEmailGate() {
+  async function submitEmailGate() {
     const e = email.trim();
     const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
-    if (!ok) return;
-    try {
-      window.localStorage.setItem("dpq_email_unlocked", "1");
-      window.localStorage.setItem("dpq_email", e);
-    } catch {
-      // ignore
+    if (!ok) {
+      setEmailError("Please enter a valid email.");
+      return;
     }
-    setIsUnlocked(true);
+    if (isSendingEmail) return;
+
+    setEmailError(null);
+    setIsSendingEmail(true);
+    try {
+      const res = await fetch("/api/send-quiz-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: e, answers }),
+      });
+
+      if (!res.ok) {
+        let msg = "Failed to send email.";
+        try {
+          const j = (await res.json()) as { error?: string };
+          if (j?.error) msg = j.error;
+        } catch {
+          // ignore
+        }
+        setEmailError(msg);
+        return;
+      }
+
+      try {
+        window.localStorage.setItem("dpq_email_unlocked", "1");
+        window.localStorage.setItem("dpq_email", e);
+      } catch {
+        // ignore
+      }
+
+      setIsUnlocked(true);
+    } catch {
+      setEmailError("Network error. Please try again.");
+    } finally {
+      setIsSendingEmail(false);
+    }
   }
 
   const optionButtonStyle: CSSProperties = { borderWidth: 2 };
@@ -889,15 +923,27 @@ export default function DigitalParentQuizPage() {
                         inputMode="email"
                         autoComplete="email"
                         placeholder="you@domain.com"
+                        disabled={isSendingEmail}
                       />
                     </div>
 
+                    {emailError ? (
+                      <div className={styles.subtle} style={{ marginTop: 10 }}>
+                        {emailError}
+                      </div>
+                    ) : null}
+
                     <div className={styles.resultGateButtons}>
-                      <button type="button" className={`${styles.button} ${styles.buttonSecondary}`} onClick={restart}>
+                      <button
+                        type="button"
+                        className={`${styles.button} ${styles.buttonSecondary}`}
+                        onClick={restart}
+                        disabled={isSendingEmail}
+                      >
                         Not now
                       </button>
-                      <button type="button" className={styles.button} onClick={submitEmailGate}>
-                        Reveal result
+                      <button type="button" className={styles.button} onClick={submitEmailGate} disabled={isSendingEmail}>
+                        {isSendingEmail ? "Sending…" : "Reveal result"}
                       </button>
                     </div>
                   </div>
