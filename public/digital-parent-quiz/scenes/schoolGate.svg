@@ -1,0 +1,11 @@
+<svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M28 130h184" stroke="currentColor" stroke-width="2" />
+  <path d="M60 130V66h120v64" stroke="currentColor" stroke-width="2" />
+  <path d="M60 66l60-34 60 34" stroke="currentColor" stroke-width="2" />
+  <path d="M120 32v-14" stroke="currentColor" stroke-width="2" />
+  <path d="M120 18h18l-6 6 6 6h-18" stroke="currentColor" stroke-width="2" />
+  <path d="M112 130V102h16v28" stroke="currentColor" stroke-width="2" />
+  <path d="M76 82h20v18H76z" stroke="currentColor" stroke-width="2" />
+  <path d="M144 82h20v18h-20z" stroke="currentColor" stroke-width="2" />
+  <path d="M90 110h60" stroke="currentColor" stroke-width="2" />
+</svg>

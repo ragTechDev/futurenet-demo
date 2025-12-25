@@ -1,0 +1,13 @@
+<svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M60 117 C60 93, 90 81, 120 81 C150 81, 180 93, 180 117 C180 147, 156 159, 138 153 C129 150, 126 141, 120 141 C114 141, 111 150, 102 153 C84 159, 60 147, 60 117 Z" stroke="currentColor" stroke-width="2" />
+  <circle cx="108" cy="111" r="3.5" stroke="currentColor" stroke-width="2" />
+  <circle cx="132" cy="111" r="3.5" stroke="currentColor" stroke-width="2" />
+  <path d="M111 120 C117 126, 123 126, 129 120" stroke="currentColor" stroke-width="2" />
+  <path d="M90 117 L102 117" stroke="currentColor" stroke-width="2" />
+  <path d="M96 111 L96 123" stroke="currentColor" stroke-width="2" />
+  <circle cx="150" cy="108" r="3" stroke="currentColor" stroke-width="2" />
+  <circle cx="159" cy="117" r="3" stroke="currentColor" stroke-width="2" />
+  <circle cx="150" cy="126" r="3" stroke="currentColor" stroke-width="2" />
+  <circle cx="141" cy="117" r="3" stroke="currentColor" stroke-width="2" />
+  <path d="M120 81 C117 69, 126 63, 132 69" stroke="currentColor" stroke-width="2" />
+</svg>

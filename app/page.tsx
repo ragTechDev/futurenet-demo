@@ -1,4 +1,5 @@
 import { Literata } from "next/font/google";
+import Link from "next/link";
 import Doodle from "../components/Doodle";
 import Typewriter from "../components/Typewriter";
 import styles from "./page.module.css";
@@ -46,6 +47,12 @@ export default function Home() {
                   showCaret
                 />
               </p>
+
+              <div className={styles.ctaRow}>
+                <Link className={styles.ctaButton} href="/digital-parent-quiz">
+                  Digital Parent Quiz
+                </Link>
+              </div>
             </div>
           </div>
         </div>

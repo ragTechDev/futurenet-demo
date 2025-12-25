@@ -1,0 +1,256 @@
+:root {
+}
+
+.page {
+  min-height: 100svh;
+  padding: 72px 20px;
+}
+
+.container {
+  width: min(860px, 100%);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.08;
+}
+
+.subcopy {
+  margin: 16px 0 0;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.65;
+  opacity: 0.92;
+}
+
+.card {
+  margin-top: 28px;
+  border: 1px solid rgba(26, 26, 26, 0.28);
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  border: 2px solid rgba(26, 26, 26, 0.62);
+  border-radius: 0;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease;
+}
+
+.buttonSecondary {
+  border-width: 1px;
+  opacity: 0.92;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:hover {
+  background: rgba(26, 26, 26, 0.06);
+}
+
+.optionButton {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 14px 14px;
+}
+
+.optionSelected {
+  background: rgba(26, 26, 26, 0.08);
+  border-color: rgba(26, 26, 26, 0.92);
+}
+
+.buttonDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.kicker {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  opacity: 0.85;
+}
+
+.subtle {
+  opacity: 0.75;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.progressBar {
+  height: 6px;
+  background: rgba(26, 26, 26, 0.12);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.5);
+  transform-origin: left;
+  transform: scaleX(var(--p, 0));
+  transition: transform 420ms ease;
+}
+
+.sceneRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  align-items: start;
+  margin-top: 14px;
+}
+
+@media (max-width: 720px) {
+  .sceneRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scene {
+  border: 1px solid rgba(26, 26, 26, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+  padding: 12px;
+}
+
+.sceneSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ .sceneSvg :global(svg) {
+  width: 100%;
+  height: auto;
+  display: block;
+ }
+
+.sceneSvg :global(path),
+.sceneSvg :global(line),
+.sceneSvg :global(circle),
+.sceneSvg :global(rect),
+.sceneSvg :global(polyline),
+.sceneSvg :global(polygon) {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: drawLine 900ms ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.sceneFloat {
+  animation: floaty 1400ms ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sceneEnter {
+  animation: sceneEnter 420ms ease both;
+}
+
+@keyframes sceneEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.textReveal {
+  animation: textReveal 520ms steps(22, end) both;
+  white-space: pre-wrap;
+}
+
+@keyframes textReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.caret {
+  display: inline-block;
+  width: 10px;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-3px);
+  animation: blink 900ms steps(1) infinite;
+  opacity: 0.75;
+  margin-left: 6px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sceneSvg :global(path),
+  .sceneSvg :global(line),
+  .sceneSvg :global(circle),
+  .sceneSvg :global(rect),
+  .sceneSvg :global(polyline),
+  .sceneSvg :global(polygon) {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .sceneFloat,
+  .sceneEnter,
+  .textReveal,
+  .progressFill {
+    animation: none;
+    transition: none;
+  }
+
+  .caret {
+    animation: none;
+    opacity: 0;
+  }
+}
