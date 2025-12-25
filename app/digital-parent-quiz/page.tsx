@@ -67,6 +67,22 @@ export default function DigitalParentQuizPage() {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<(string | null)[]>(() => Array.from({ length: QUESTIONS.length }, () => null));
   const storyCanvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [email, setEmail] = useState(() => {
+    try {
+      if (typeof window === "undefined") return "";
+      return window.localStorage.getItem("dpq_email") ?? "";
+    } catch {
+      return "";
+    }
+  });
+  const [isUnlocked, setIsUnlocked] = useState(() => {
+    try {
+      if (typeof window === "undefined") return false;
+      return window.localStorage.getItem("dpq_email_unlocked") === "1";
+    } catch {
+      return false;
+    }
+  });
 
   const currentQuestion = QUESTIONS[questionIndex] ?? null;
   const totalQuestions = QUESTIONS.length;
@@ -145,6 +161,25 @@ export default function DigitalParentQuizPage() {
         ctx.arcTo(x, y + h, x, y, rr);
         ctx.arcTo(x, y, x + w, y, rr);
         ctx.closePath();
+      };
+
+      const pixelateRegion = (yStart: number, block: number) => {
+        const h = H - yStart;
+        if (h <= 0) return;
+        const data = ctx.getImageData(0, yStart, W, h);
+        const d = data.data;
+        for (let y = 0; y < h; y += block) {
+          for (let x = 0; x < W; x += block) {
+            const sx = Math.min(W - 1, x + Math.floor(block / 2));
+            const sy = Math.min(h - 1, y + Math.floor(block / 2));
+            const i = (sy * W + sx) * 4;
+            const r = d[i];
+            const g = d[i + 1];
+            const b = d[i + 2];
+            ctx.fillStyle = `rgb(${r},${g},${b})`;
+            ctx.fillRect(x, yStart + y, block, block);
+          }
+        }
       };
 
       const gridTexture = (x: number, y: number, w: number, h: number, step: number, alpha: number, invert: boolean) => {
@@ -643,10 +678,14 @@ export default function DigitalParentQuizPage() {
       ctx.arc(sx, sy, 22, 0, Math.PI * 2);
       ctx.stroke();
       ctx.restore();
+
+      if (!isUnlocked) {
+        pixelateRegion(440, 18);
+      }
     };
 
     void draw();
-  }, [step, topPersona]);
+  }, [step, topPersona, isUnlocked]);
 
   function startQuiz() {
     setStep("quiz");
@@ -676,6 +715,19 @@ export default function DigitalParentQuizPage() {
     setStep("intro");
     setQuestionIndex(0);
     setAnswers(Array.from({ length: QUESTIONS.length }, () => null));
+  }
+
+  function submitEmailGate() {
+    const e = email.trim();
+    const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
+    if (!ok) return;
+    try {
+      window.localStorage.setItem("dpq_email_unlocked", "1");
+      window.localStorage.setItem("dpq_email", e);
+    } catch {
+      // ignore
+    }
+    setIsUnlocked(true);
   }
 
   const optionButtonStyle: CSSProperties = { borderWidth: 2 };
@@ -800,9 +852,59 @@ export default function DigitalParentQuizPage() {
         ) : null}
 
         {step === "result" ? (
+          <div className={styles.storyGateRegion}>
             <div className={`${styles.scene} ${styles.storyPreviewWrap}`} style={{ padding: 12 }}>
               <canvas ref={storyCanvasRef} className={styles.storyCanvas} />
             </div>
+
+            {!isUnlocked ? (
+              <div className={styles.resultGateOverlay} role="dialog" aria-modal="true">
+                <div className={styles.resultGateWindow}>
+                  <div className={styles.resultGateTitlebar}>
+                    <div className={styles.resultGateTitle}>Email required</div>
+                    <div className={styles.resultGateControls}>
+                      <div className={styles.resultGateControl} aria-hidden="true" />
+                      <div className={styles.resultGateControl} aria-hidden="true" />
+                      <div className={styles.resultGateControl} aria-hidden="true" />
+                    </div>
+                  </div>
+
+                  <div className={styles.resultGateBody}>
+                    <div className={styles.resultGateCopy}>
+                      Enter your email to reveal the rest of your result and get a full breakdown of all Digital Parent persona types.
+                    </div>
+
+                    <div className={styles.resultGateRow}>
+                      <label className={styles.resultGateLabel} htmlFor="dpq-email">
+                        Email
+                      </label>
+                      <input
+                        id="dpq-email"
+                        className={styles.resultGateInput}
+                        value={email}
+                        onChange={(ev) => setEmail(ev.target.value)}
+                        onKeyDown={(ev) => {
+                          if (ev.key === "Enter") submitEmailGate();
+                        }}
+                        inputMode="email"
+                        autoComplete="email"
+                        placeholder="you@domain.com"
+                      />
+                    </div>
+
+                    <div className={styles.resultGateButtons}>
+                      <button type="button" className={`${styles.button} ${styles.buttonSecondary}`} onClick={restart}>
+                        Not now
+                      </button>
+                      <button type="button" className={styles.button} onClick={submitEmailGate}>
+                        Reveal result
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </div>
         ) : null}
       </div>
     </main>

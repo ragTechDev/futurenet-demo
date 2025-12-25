@@ -202,6 +202,103 @@
   color: #fff;
 }
 
+.storyGateRegion {
+  position: relative;
+}
+
+.resultGateOverlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(247, 247, 242, 0.72);
+  backdrop-filter: blur(2px);
+  padding: 16px;
+}
+
+.resultGateWindow {
+  width: min(560px, 100%);
+  background: #f7f7f2;
+  color: #141414;
+  border: 2px solid rgba(20, 20, 20, 0.92);
+  box-shadow: 8px 8px 0 rgba(20, 20, 20, 0.92);
+}
+
+.resultGateTitlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 2px solid rgba(20, 20, 20, 0.92);
+  background: #141414;
+  color: #f7f7f2;
+}
+
+.resultGateTitle {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.resultGateControls {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.resultGateControl {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(247, 247, 242, 0.92);
+  background: transparent;
+}
+
+.resultGateBody {
+  padding: 14px 14px 16px;
+}
+
+.resultGateCopy {
+  font-size: 15px;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+.resultGateRow {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.resultGateLabel {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.resultGateInput {
+  width: 100%;
+  padding: 10px 10px;
+  border: 2px solid rgba(20, 20, 20, 0.92);
+  border-radius: 0;
+  background: #fff;
+  color: #141414;
+  font: inherit;
+  outline: none;
+}
+
+.resultGateInput:focus {
+  outline: 2px solid rgba(20, 20, 20, 0.92);
+  outline-offset: 2px;
+}
+
+.resultGateButtons {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 720px) {
   .storyPreviewWrap {
     width: 100vw;
