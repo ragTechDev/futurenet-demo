@@ -78,7 +78,7 @@ BoT Talk uses **LTE-M (Long Term Evolution for Machines)** cellular connectivity
 
 ### Market Size & Growth
 - **Global Kids GPS Tracker Market**: $2,030.86 million (2024) → $6,387.4 million (2032)
-- **CAGR**: 15.4% (2024-2032)
+- **Compound Annual Growth Rate - CAGR**: 15.4% (2024-2032)
 - **Regional Distribution (2024)**:
   - North America: 40% market share
   - Europe: 30%
@@ -88,25 +88,34 @@ BoT Talk uses **LTE-M (Long Term Evolution for Machines)** cellular connectivity
 ### Key Competitors
 
 1. **AngelSense** - Best overall, especially for kids with disabilities
+   - Website: https://www.angelsense.com/
    - Free device for first-time purchase
    - Premium features and monitoring
 
 2. **Bark Watch** - Smartwatch option
+   - Website: https://www.bark.us/bark-watch/
    - $7/month lease
    - Screen-based interface
 
 3. **Tack GPS Plus** - Budget option
+   - Website: https://www.tackgps.app/
    - $79.95 device
    - Basic GPS tracking
 
 4. **Tracki** - International option
+   - Website: https://tracki.com/
    - $18.88 device (often on sale)
    - $20/month service (or $10/month annually)
    - Works in 190 countries
 
 5. **Jiobit** - Wearable tracker with AI/IoT integration
+   - Website: https://www.jiobit.com/
+
 6. **GeoZilla** - Location sharing platform
+   - Website: https://geozilla.com/
+
 7. **Verizon GizmoWatch** - Smartwatch for kids
+   - Website: https://www.verizon.com/connected-smartwatches/verizon-gizmo-watch-3/
 
 ### BoT Talk's Competitive Advantages
 
