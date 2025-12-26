@@ -1,6 +1,15 @@
 import * as React from "react";
 import { Body, Container, Head, Heading, Hr, Html, Preview, Section, Text } from "@react-email/components";
-import type { PersonaId } from "../digital-parent-quiz/quizTypes";
+
+export type PersonaId =
+  | "bb-bold"
+  | "htc-desire"
+  | "palm-treo"
+  | "razr"
+  | "walkman"
+  | "nokia-3310"
+  | "nokia-e71"
+  | "bb-curve";
 
 export type DigitalParentQuizResultsPayload = {
   submittedAt: string;
@@ -49,8 +58,108 @@ const mono = {
     "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
 };
 
-export default function DigitalParentQuizResultsEmail(props: DigitalParentQuizResultsEmailProps) {
-  const { topPersona, allPersonas, payload, productUrl } = props;
+// Default props for email preview
+const defaultProps: DigitalParentQuizResultsEmailProps = {
+  topPersona: {
+    id: "bb-bold",
+    phoneModel: "BlackBerry Bold 9900",
+    characterName: "The Executive",
+    tagline: "Always connected, always in control",
+    summary: "You're the type who needs to stay on top of everything. Your phone is your command center, and you use it to manage both work and family with military precision.",
+    strengths: [
+      "Excellent at multitasking",
+      "Great organizational skills",
+      "Strong communication abilities",
+      "Natural leadership qualities",
+      "Efficient time management",
+      "Problem-solving mindset"
+    ],
+    watchOutFor: [
+      "Work-life balance can suffer",
+      "May overwhelm family with structure",
+      "Could miss spontaneous moments",
+      "Tendency to over-schedule",
+      "Risk of burnout",
+      "May prioritize efficiency over connection"
+    ],
+    nextQuest: [
+      "Schedule regular device-free family time",
+      "Practice being present in conversations",
+      "Let kids lead some activities",
+      "Create space for unstructured play",
+      "Model healthy tech boundaries",
+      "Focus on quality over quantity time"
+    ]
+  },
+  allPersonas: [
+    {
+      id: "bb-bold",
+      phoneModel: "BlackBerry Bold 9900",
+      characterName: "The Executive",
+      tagline: "Always connected, always in control",
+      summary: "You're the type who needs to stay on top of everything. Your phone is your command center."
+    },
+    {
+      id: "nokia-3310",
+      phoneModel: "Nokia 3310",
+      characterName: "The Minimalist",
+      tagline: "Less is more, focus on what matters",
+      summary: "You believe in keeping things simple and focusing on real-world connections."
+    },
+    {
+      id: "razr",
+      phoneModel: "Motorola RAZR",
+      characterName: "The Trendsetter",
+      tagline: "Style meets function",
+      summary: "You like to stay current with trends while maintaining a sense of sophistication."
+    }
+  ],
+  payload: {
+    submittedAt: "2025-12-26T14:00:00Z",
+    email: "parent@example.com",
+    answers: [
+      {
+        questionId: "q1",
+        optionId: "o1",
+        chapter: "Morning Routine",
+        prompt: "How do you start your day?",
+        selectedLabel: "Check emails and messages immediately"
+      }
+    ],
+    scores: {
+      "bb-bold": 85,
+      "nokia-3310": 45,
+      "razr": 60,
+      "htc-desire": 30,
+      "palm-treo": 25,
+      "walkman": 20,
+      "nokia-e71": 70,
+      "bb-curve": 55
+    },
+    topPersonaId: "bb-bold"
+  },
+  productUrl: "https://futurenet-demo.netlify.app/digital-parent-quiz"
+};
+
+export default function DigitalParentQuizResultsEmail(props?: DigitalParentQuizResultsEmailProps) {
+  const actualProps = props || defaultProps;
+  const topPersona = actualProps?.topPersona || defaultProps.topPersona;
+  const allPersonas = actualProps?.allPersonas || defaultProps.allPersonas;
+  const payload = actualProps?.payload || defaultProps.payload;
+  const productUrl = actualProps?.productUrl || defaultProps.productUrl;
+
+  // Safety check
+  if (!topPersona) {
+    return (
+      <Html>
+        <Head />
+        <Preview>Email Preview Error</Preview>
+        <Body>
+          <Text>Error: Unable to load email data</Text>
+        </Body>
+      </Html>
+    );
+  }
 
   return (
     <Html>

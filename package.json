@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "email-build": "email build --dir app/emails",
+    "email-dev": "email dev --dir app/emails",
+    "email-export": "email export --dir app/emails"
   },
   "dependencies": {
     "@react-email/components": "^1.0.2",
@@ -26,6 +29,8 @@
     "eslint-config-next": "16.0.4",
     "sass": "^1.94.2",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@react-email/preview-server": "5.1.0",
+    "react-email": "5.1.0"
   }
 }
