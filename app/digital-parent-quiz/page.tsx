@@ -928,8 +928,9 @@ export default function DigitalParentQuizPage() {
       if (!res.ok) {
         let msg = "Failed to send email.";
         try {
-          const j = (await res.json()) as { error?: string };
+          const j = (await res.json()) as { error?: string; details?: string };
           if (j?.error) msg = j.error;
+          if (j?.details) msg = `${msg} (${j.details})`;
         } catch {
           // ignore
         }

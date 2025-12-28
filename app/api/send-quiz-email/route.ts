@@ -59,6 +59,32 @@ function errorToMessage(err: unknown) {
   return String(err);
 }
 
+function shouldExposeDetails() {
+  // Netlify deploy previews often run with NODE_ENV=production, which hides details.
+  // Expose details for deploy-preview/branch-deploy contexts to make SMTP debugging possible.
+  return (
+    process.env.NODE_ENV !== "production" ||
+    process.env.CONTEXT === "deploy-preview" ||
+    process.env.CONTEXT === "branch-deploy"
+  );
+}
+
+function safeDebugInfo(extra?: Record<string, unknown>) {
+  return {
+    nodeEnv: process.env.NODE_ENV ?? null,
+    context: process.env.CONTEXT ?? null,
+    hasEnv: {
+      SMTP_HOST: !!process.env.SMTP_HOST,
+      SMTP_PORT: !!process.env.SMTP_PORT,
+      SMTP_USER: !!process.env.SMTP_USER,
+      SMTP_PASS: !!process.env.SMTP_PASS,
+      EMAIL_FROM: !!process.env.EMAIL_FROM,
+      PARTICIPANT_ID_SALT: !!process.env.PARTICIPANT_ID_SALT,
+    },
+    ...extra,
+  };
+}
+
 function makeParticipantId(email: string) {
   const salt = process.env.PARTICIPANT_ID_SALT;
   if (salt) {
@@ -170,7 +196,8 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         error: "Email render failed",
-        ...(process.env.NODE_ENV !== "production" ? { details } : null),
+        ...(shouldExposeDetails() ? { details } : null),
+        debug: safeDebugInfo({ stage: "render" }),
       },
       { status: 500 }
     );
@@ -212,7 +239,8 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         error: "Email configuration missing",
-        ...(process.env.NODE_ENV !== "production" ? { details } : null),
+        ...(shouldExposeDetails() ? { details } : null),
+        debug: safeDebugInfo({ stage: "env" }),
       },
       { status: 500 }
     );
@@ -243,10 +271,21 @@ export async function POST(req: Request) {
   } catch (err) {
     const details = errorToMessage(err);
     console.error("[send-quiz-email] send failed:", err);
+    const e = err as { name?: string; code?: string; message?: string };
     return NextResponse.json(
       {
         error: "Email send failed",
-        ...(process.env.NODE_ENV !== "production" ? { details } : null),
+        ...(shouldExposeDetails() ? { details } : null),
+        debug: safeDebugInfo({
+          stage: "send",
+          smtp: {
+            host: smtp.host,
+            port: smtp.port,
+            secure: smtp.secure,
+          },
+          errorName: e?.name ?? null,
+          errorCode: e?.code ?? null,
+        }),
       },
       { status: 500 }
     );
