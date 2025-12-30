@@ -1,0 +1,10 @@
+<svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="86" cy="98" r="8" stroke="currentColor" stroke-width="2" />
+  <path d="M66 132c6-18 14-26 20-26s14 8 20 26" stroke="currentColor" stroke-width="2" />
+  <circle cx="154" cy="98" r="8" stroke="currentColor" stroke-width="2" />
+  <path d="M134 132c6-18 14-26 20-26s14 8 20 26" stroke="currentColor" stroke-width="2" />
+  <path d="M48 52h74v34H76l-12 12V86H48z" stroke="currentColor" stroke-width="2" />
+  <path d="M132 44h76v36h-42l-12 12V80h-22z" stroke="currentColor" stroke-width="2" />
+  <path d="M62 66h42" stroke="currentColor" stroke-width="2" />
+  <path d="M144 60h42" stroke="currentColor" stroke-width="2" />
+</svg>

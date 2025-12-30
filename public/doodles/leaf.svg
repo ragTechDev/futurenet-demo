@@ -1,0 +1,8 @@
+<svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" class="doodleSvg">
+  <g fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 360 C140 220, 260 140, 360 160 C480 184, 540 320, 470 420 C410 506, 270 530, 170 470 C130 446, 110 408, 120 360 Z" />
+    <path d="M190 470 C280 420, 360 330, 420 210" />
+    <path d="M250 430 C270 400, 300 370, 335 330" />
+    <path d="M300 470 C330 430, 360 390, 395 340" />
+  </g>
+</svg>

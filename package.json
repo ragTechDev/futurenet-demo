@@ -7,25 +7,30 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "pitch": "npx http-server . -o presentations/futurenet-pitch/index.html",
-    "build:theme": "sass presentations/futurenet-pitch/theme/futurenet.scss presentations/futurenet-pitch/theme/futurenet.css",
-    "watch:theme": "sass --watch presentations/futurenet-pitch/theme:presentations/futurenet-pitch/theme"
+    "email-build": "email build --dir app/emails",
+    "email-dev": "email dev --dir app/emails --port 8000",
+    "email-export": "email export --dir app/emails"
   },
   "dependencies": {
+    "@react-email/components": "^1.0.2",
+    "@react-email/render": "1.0.6",
     "next": "^16.0.7",
+    "nodemailer": "^6.9.16",
     "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "reveal.js": "^5.2.1"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.4",
     "sass": "^1.94.2",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@react-email/preview-server": "5.1.0",
+    "react-email": "5.1.0"
   }
 }

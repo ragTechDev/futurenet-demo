@@ -1,0 +1,14 @@
+<svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="78" cy="88" r="18" stroke="currentColor" stroke-width="2" />
+  <circle cx="78" cy="88" r="6" stroke="currentColor" stroke-width="2" />
+  <path d="M78 70v-10" stroke="currentColor" stroke-width="2" />
+  <path d="M72 58c6-6 12-6 18 0" stroke="currentColor" stroke-width="2" />
+
+  <path d="M132 56c0-8 6-14 14-14h30c8 0 14 6 14 14v78c0 8-6 14-14 14h-30c-8 0-14-6-14-14V56z" stroke="currentColor" stroke-width="2" />
+  <circle cx="152" cy="80" r="2" fill="currentColor" />
+  <circle cx="170" cy="80" r="2" fill="currentColor" />
+  <path d="M154 92 C160 98, 162 98, 168 92" stroke="currentColor" stroke-width="2" />
+  <circle cx="161" cy="126" r="3" stroke="currentColor" stroke-width="2" />
+  <path d="M160 42 C154 30, 168 26, 174 34" stroke="currentColor" stroke-width="2" />
+  <circle cx="174" cy="34" r="3" stroke="currentColor" stroke-width="2" />
+</svg>

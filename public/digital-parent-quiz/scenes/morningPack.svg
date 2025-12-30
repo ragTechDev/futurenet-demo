@@ -1,0 +1,11 @@
+<svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="120" cy="80" r="22" stroke="currentColor" stroke-width="2" />
+  <path d="M120 42v12" stroke="currentColor" stroke-width="2" />
+  <path d="M120 106v12" stroke="currentColor" stroke-width="2" />
+  <path d="M82 80h12" stroke="currentColor" stroke-width="2" />
+  <path d="M146 80h12" stroke="currentColor" stroke-width="2" />
+  <path d="M94 54l8 8" stroke="currentColor" stroke-width="2" />
+  <path d="M138 98l8 8" stroke="currentColor" stroke-width="2" />
+  <path d="M146 54l-8 8" stroke="currentColor" stroke-width="2" />
+  <path d="M102 98l-8 8" stroke="currentColor" stroke-width="2" />
+</svg>

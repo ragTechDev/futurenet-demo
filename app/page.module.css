@@ -1,0 +1,385 @@
+.page {
+  min-height: 100svh;
+  background: #f7f3ea;
+  color: #1a1a1a;
+}
+
+.hero {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 96px 20px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
+}
+
+.heroGrid {
+  width: min(1100px, 100%);
+  height: min(720px, calc(100svh - 120px));
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1fr;
+  grid-template-rows: 1fr 1.1fr 1fr;
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: center;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: clamp(52px, 7vw, 92px);
+  line-height: 1.02;
+  margin: 0;
+}
+
+.typeBlock {
+  margin: 14px auto 0;
+  max-width: 76ch;
+}
+
+.ctaRow {
+  margin: 18px auto 0;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: ctaReveal 260ms ease-out forwards;
+  animation-delay: 3150ms;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 12px 16px;
+  border: 3px solid rgba(26, 26, 26, 0.65);
+  border-radius: 0;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  background: rgba(247, 243, 234, 0.2);
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.ctaButton:hover {
+  background: rgba(26, 26, 26, 0.04);
+  border-color: rgba(26, 26, 26, 0.85);
+}
+
+.ctaButton:focus-visible {
+  outline: 2px solid rgba(26, 26, 26, 0.6);
+  outline-offset: 3px;
+}
+
+@keyframes ctaReveal {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.description {
+  margin: 0;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.6;
+  opacity: 0.92;
+  white-space: pre-wrap;
+}
+
+.tagline {
+  margin: 14px 0 0;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.taglineHero {
+  margin: 10px 0 0;
+}
+
+.handUnderline {
+  position: relative;
+  display: inline-block;
+}
+
+.handUnderlineText {
+  position: relative;
+  z-index: 1;
+}
+
+.handUnderlineSvg {
+  position: absolute;
+  left: -0.12em;
+  right: -0.12em;
+  bottom: -0.34em;
+  height: 0.95em;
+  width: calc(100% + 0.24em);
+  overflow: visible;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.handUnderlineSvg :global(path) {
+  fill: none;
+  stroke: rgba(26, 26, 26, 0.8);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  filter: blur(0.1px);
+  animation: underlineStroke 950ms ease-out forwards;
+  animation-delay: 2100ms;
+}
+
+@keyframes underlineStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.08em;
+  isolation: isolate;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  left: -0.06em;
+  right: -0.06em;
+  top: 55%;
+  height: 0.95em;
+  transform: translateY(-50%) scaleX(0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.18) 10%,
+    rgba(0, 0, 0, 0.18) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 6px;
+  z-index: -1;
+  transform-origin: left;
+  animation: highlightSweep 900ms ease-out forwards;
+  animation-delay: 1150ms;
+}
+
+.highlight {
+  z-index: 0;
+}
+
+.highlight > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes highlightSweep {
+  to {
+    transform: translateY(-50%) scaleX(1);
+  }
+}
+
+:global(.caret) {
+  display: inline-block;
+  width: 0.6ch;
+  height: 1em;
+  border-left: 2px solid currentColor;
+  margin-left: 2px;
+  transform: translateY(2px);
+  animation: blink 1.05s steps(2, end) infinite;
+  opacity: 0.8;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.doodleCell {
+  z-index: 1;
+  pointer-events: none;
+  color: rgba(26, 26, 26, 0.8);
+  opacity: 0.95;
+  filter: contrast(1.05);
+  display: grid;
+  place-items: center;
+}
+
+.tl {
+  grid-column: 1;
+  grid-row: 1;
+  transform: rotate(-3deg);
+}
+
+.tr {
+  grid-column: 3;
+  grid-row: 1;
+  transform: rotate(4deg);
+  opacity: 0.88;
+}
+
+.bl {
+  grid-column: 1;
+  grid-row: 3;
+  transform: rotate(-2deg);
+}
+
+.br {
+  grid-column: 3;
+  grid-row: 3;
+  transform: rotate(2deg);
+  opacity: 0.9;
+}
+
+.bc {
+  grid-column: 2;
+  grid-row: 3;
+  transform: rotate(-3deg);
+  opacity: 0.86;
+}
+
+.doodleCell :global(svg) {
+  width: min(160px, 18vw);
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.bc :global(svg) {
+  width: min(180px, 22vw);
+}
+
+@media (max-width: 760px) {
+  .heroGrid {
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 16px;
+  }
+
+  .heroInner {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .tl {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .tr {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .bl {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .br {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .bc {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+
+  .tl,
+  .tr,
+  .bl,
+  .br,
+  .bc {
+    transform: none;
+  }
+
+  .doodleCell :global(svg) {
+    width: min(140px, 40vw);
+  }
+
+  .bc :global(svg) {
+    width: min(200px, 64vw);
+  }
+}
+
+.doodleCell :global(path),
+.doodleCell :global(rect),
+.doodleCell :global(circle),
+.doodleCell :global(line),
+.doodleCell :global(polyline),
+.doodleCell :global(polygon) {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: draw 2.2s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doodleCell :global(path),
+  .doodleCell :global(rect),
+  .doodleCell :global(circle),
+  .doodleCell :global(line),
+  .doodleCell :global(polyline),
+  .doodleCell :global(polygon) {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  :global(.caret) {
+    animation: none;
+    opacity: 0;
+  }
+
+  .handUnderlineSvg :global(path) {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .highlight::before {
+    animation: none;
+    transform: translateY(-50%) scaleX(1);
+  }
+
+  .ctaRow {
+    animation: none;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
