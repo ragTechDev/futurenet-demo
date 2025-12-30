@@ -56,6 +56,7 @@ export type DigitalParentQuizResultsEmailProps = {
   payload: DigitalParentQuizResultsPayload;
   baseUrl: string;
   quizUrl: string;
+  unsubscribeTo?: string;
 };
 
 const base = {
@@ -139,7 +140,8 @@ const defaultProps: DigitalParentQuizResultsEmailProps = {
     },
   },
   baseUrl: "https://futurenet-demo..app/",
-  quizUrl: "https://futurenet-demo..app/digital-parent-quiz"
+  quizUrl: "https://futurenet-demo..app/digital-parent-quiz",
+  unsubscribeTo: "hello@ragtechdev.com",
 };
 
 export default function DigitalParentQuizResultsEmail(props: DigitalParentQuizResultsEmailProps) {
@@ -148,8 +150,24 @@ export default function DigitalParentQuizResultsEmail(props: DigitalParentQuizRe
     allPersonas = defaultProps.allPersonas, 
     payload = defaultProps.payload, 
     baseUrl = defaultProps.baseUrl, 
-    quizUrl = defaultProps.quizUrl 
+    quizUrl = defaultProps.quizUrl,
+    unsubscribeTo = defaultProps.unsubscribeTo,
   } = props;
+  
+  const unsubscribeSubject = encodeURIComponent("Unsubscribe request — Digital Parent Quiz");
+  const unsubscribeBody = encodeURIComponent(
+    [
+      "Hi FutureNet,",
+      "",
+      "Please remove me from future research outreach emails.",
+      "",
+      `Participant ID: ${payload?.participantId ?? "unknown"}`,
+      `Email: ${payload?.email ?? ""}`,
+    ].join("\n")
+  );
+  const unsubscribeHref = unsubscribeTo
+    ? `mailto:${unsubscribeTo}?subject=${unsubscribeSubject}&body=${unsubscribeBody}`
+    : undefined;
   
 
   return (
@@ -516,6 +534,35 @@ export default function DigitalParentQuizResultsEmail(props: DigitalParentQuizRe
               <Text style={{ margin: "16px 0 0", fontSize: "14px", opacity: "0.7" }}>
                 Forward this email to friends or share the link: {quizUrl}
               </Text>
+            </Section>
+
+            <Section style={{ marginBottom: "24px" }}>
+              <Text style={{ margin: "0 0 10px", fontSize: "13px", lineHeight: "1.6", color: "#4a4a4a" }}>
+                You’re receiving this email because you entered your email address to view your Digital Parent Quiz results.
+                We may also contact you in future about research updates or follow-up studies.
+              </Text>
+              <Text style={{ margin: "0 0 14px", fontSize: "13px", lineHeight: "1.6", color: "#4a4a4a" }}>
+                If you’d rather not receive future emails, you can unsubscribe below.
+              </Text>
+              {unsubscribeHref ? (
+                <div style={{ textAlign: "center" }}>
+                  <a
+                    href={unsubscribeHref}
+                    style={{
+                      display: "inline-block",
+                      padding: "12px 18px",
+                      backgroundColor: "#ffffff",
+                      border: "2px solid rgba(26, 26, 26, 0.65)",
+                      textDecoration: "none",
+                      color: "#1a1a1a",
+                      fontWeight: "600",
+                      fontSize: "14px",
+                    }}
+                  >
+                    Unsubscribe
+                  </a>
+                </div>
+              ) : null}
             </Section>
 
             <Hr style={{ borderColor: "rgba(26, 26, 26, 0.2)", margin: "32px 0", borderWidth: "2px" }} />

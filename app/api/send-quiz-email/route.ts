@@ -6,6 +6,7 @@ import crypto from "crypto";
 
 import DigitalParentQuizResultsEmail, {
   type DigitalParentQuizResultsPayload,
+  type DigitalParentQuizResultsEmailProps,
 } from "../../emails/DigitalParentQuizResultsEmail";
 
 import { QUESTIONS } from "../../digital-parent-quiz/quizQuestions";
@@ -210,35 +211,6 @@ export async function POST(req: Request) {
     summary: p.summary,
   }));
 
-  let html: string;
-  let text: string;
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ? process.env.NEXT_PUBLIC_SITE_URL : "https://ragtechdev.com/";
-    const quizUrl = process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/digital-parent-quiz` : "https://ragtechdev.com/";
-
-    const emailComponent = React.createElement(DigitalParentQuizResultsEmail, {
-      topPersona,
-      allPersonas,
-      payload,
-      baseUrl,
-      quizUrl,
-    });
-
-    html = await render(emailComponent, { pretty: true });
-    text = await render(emailComponent, { plainText: true });
-  } catch (err) {
-    const details = errorToMessage(err);
-    console.error("[send-quiz-email] render failed:", err);
-    return NextResponse.json(
-      {
-        error: "Email render failed",
-        ...(shouldExposeDetails() ? { details } : null),
-        debug: safeDebugInfo({ stage: "render" }),
-      },
-      { status: 500 }
-    );
-  }
-
   // Validate env before attempting SMTP.
   let smtp: {
     host: string;
@@ -282,6 +254,38 @@ export async function POST(req: Request) {
     );
   }
 
+  let html: string;
+  let text: string;
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ? process.env.NEXT_PUBLIC_SITE_URL : "https://ragtechdev.com/";
+    const quizUrl = process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/digital-parent-quiz` : "https://ragtechdev.com/";
+
+    const emailProps: DigitalParentQuizResultsEmailProps = {
+      topPersona,
+      allPersonas,
+      payload,
+      baseUrl,
+      quizUrl,
+      unsubscribeTo: smtp.from,
+    };
+
+    const emailComponent = React.createElement(DigitalParentQuizResultsEmail, emailProps);
+
+    html = await render(emailComponent, { pretty: true });
+    text = await render(emailComponent, { plainText: true });
+  } catch (err) {
+    const details = errorToMessage(err);
+    console.error("[send-quiz-email] render failed:", err);
+    return NextResponse.json(
+      {
+        error: "Email render failed",
+        ...(shouldExposeDetails() ? { details } : null),
+        debug: safeDebugInfo({ stage: "render" }),
+      },
+      { status: 500 }
+    );
+  }
+
   try {
     const transport = nodemailer.createTransport({
       host: smtp.host,
@@ -300,7 +304,7 @@ export async function POST(req: Request) {
         'X-Mailer': 'FutureNet Digital Parent Quiz',
         'X-Priority': '3',
         'X-MSMail-Priority': 'Normal',
-        'List-Unsubscribe': '<mailto:hello@ragtechdev.com>',
+        'List-Unsubscribe': `<mailto:${smtp.from}>`,
         'Reply-To': `FutureNet <${smtp.from}>`,
       },
     });
