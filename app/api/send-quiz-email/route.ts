@@ -112,6 +112,31 @@ function questionSetHashFromQuestions() {
   return crypto.createHash("sha256").update(JSON.stringify(canonical)).digest("hex").slice(0, 16);
 }
 
+function normalizeSiteUrl(raw: string) {
+  const trimmed = raw.trim();
+  if (!trimmed) return "";
+  return trimmed.replace(/\/+$/, "");
+}
+
+function getSiteUrl(req: Request) {
+  const fromEnv = normalizeSiteUrl(
+    process.env.SITE_URL ??
+      process.env.URL ??
+      process.env.NEXT_PUBLIC_SITE_URL ??
+      ""
+  );
+  if (fromEnv) return fromEnv;
+
+  const forwardedProto = req.headers.get("x-forwarded-proto")?.trim();
+  const proto = forwardedProto || "https";
+  const forwardedHost = req.headers.get("x-forwarded-host")?.trim();
+  const host = forwardedHost || req.headers.get("host")?.trim();
+  if (host) return `${proto}://${host}`;
+
+  // Last-resort fallback.
+  return "https://futurenet.ragtechdev.com";
+}
+
 export async function POST(req: Request) {
   let body: SendQuizEmailBody;
   try {
@@ -257,8 +282,9 @@ export async function POST(req: Request) {
   let html: string;
   let text: string;
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ? process.env.NEXT_PUBLIC_SITE_URL : "https://ragtechdev.com/";
-    const quizUrl = process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/digital-parent-quiz` : "https://ragtechdev.com/";
+    const siteUrl = getSiteUrl(req);
+    const baseUrl = siteUrl;
+    const quizUrl = `${siteUrl}/digital-parent-quiz`;
 
     const emailProps: DigitalParentQuizResultsEmailProps = {
       topPersona,
