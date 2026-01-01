@@ -383,7 +383,7 @@ export default function DigitalParentQuizResultsEmail(props: DigitalParentQuizRe
 
               {/* Social Share Buttons */}
               <div style={{ textAlign: "center", margin: "16px 0" }}>
-                <Link href={`https://wa.me/?text=I just discovered I'm "${topPersona.characterName}" (${topPersona.phoneModel}) in FutureNet's Digital Parent Quiz! 📱 Help us research how technology shapes modern parenting - what's your digital parenting style? Take the quiz: ${quizUrl}`} style={{ textDecoration: "none" }}>
+                <Link href={`https://wa.me/?text=${encodeURIComponent(`I just discovered I'm "${topPersona.characterName}" (${topPersona.phoneModel}) in FutureNet's Digital Parent Quiz! 📱 Help us research how technology shapes modern parenting - what's your digital parenting style? Take the quiz: ${quizUrl}`)}`} style={{ textDecoration: "none" }}>
                   <div style={{ 
                     backgroundColor: "#a8e6a3", 
                     color: "#2d5a2d", 
@@ -418,7 +418,7 @@ export default function DigitalParentQuizResultsEmail(props: DigitalParentQuizRe
                   </div>
                 </Link>
                 
-                <Link href={`https://t.me/share/url?url=${quizUrl}&text=I just discovered I'm "${topPersona.characterName}" (${topPersona.phoneModel}) in FutureNet's Digital Parent Quiz! Help us research how technology shapes modern parenting - what's your digital parenting style?`} style={{ textDecoration: "none" }}>
+                <Link href={`https://t.me/share/url?url=${encodeURIComponent(quizUrl)}&text=${encodeURIComponent(`I just discovered I'm "${topPersona.characterName}" (${topPersona.phoneModel}) in FutureNet's Digital Parent Quiz! Help us research how technology shapes modern parenting - what's your digital parenting style?`)}`} style={{ textDecoration: "none" }}>
                   <div style={{ 
                     backgroundColor: "#a3d5f0", 
                     color: "#2d4a5a", 
@@ -628,7 +628,7 @@ export default function DigitalParentQuizResultsEmail(props: DigitalParentQuizRe
                   wordBreak: "break-all"
                 }}>
                   <span style={{ fontFamily: "'Courier New', monospace", fontSize: "11px" }}>
-                  {JSON.stringify(payload?.answers?.map((q, index: number) => ({
+                  {JSON.stringify(payload?.answers?.map((q) => ({
                   question_id: q.questionId,
                   selected_option: q.optionId,
                   chapter: q.chapter
