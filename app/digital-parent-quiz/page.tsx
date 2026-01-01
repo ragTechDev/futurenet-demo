@@ -358,6 +358,39 @@ export default function DigitalParentQuizPage() {
         return out;
       };
 
+      const wrapHard = (text: string, maxW: number, font: string): string[] => {
+        ctx.font = font;
+        const out: string[] = [];
+        let i = 0;
+        const breakChars = new Set(["/", "?", "&", "-", ".", "="]);
+
+        while (i < text.length) {
+          let end = i;
+          let lastBreak = -1;
+
+          while (end < text.length) {
+            const ch = text[end];
+            if (breakChars.has(ch)) lastBreak = end + 1;
+            const candidate = text.slice(i, end + 1);
+            if (ctx.measureText(candidate).width > maxW) break;
+            end += 1;
+          }
+
+          if (end === i) {
+            // Always make progress even if a single character is too wide.
+            out.push(text.slice(i, i + 1));
+            i += 1;
+            continue;
+          }
+
+          const cut = lastBreak > i && lastBreak <= end ? lastBreak : end;
+          out.push(text.slice(i, cut));
+          i = cut;
+        }
+
+        return out.filter(Boolean);
+      };
+
       ctx.clearRect(0, 0, W, H);
 
       // Y2K Cyberpunk gradient background
@@ -806,54 +839,34 @@ export default function DigitalParentQuizPage() {
 
       gridTexture(ctaBoxX + 2, ctaBoxY + 2, ctaBoxW - 4, ctaBoxH - 4, 22, 0.06, false);
 
-      const ctaTextX = ctaBoxX + 22;
-      const ctaTextY = ctaBoxY + 32;
       const ctaTextMaxW = ctaBoxW - 44;
 
-      const ctaPrefix = "Follow our research on ";
-      const ctaHandle = "@ragtechdev";
-      const ctaSuffix = " and take the quiz now at:";
-
-      ctx.fillStyle = "rgba(0,0,0,0.88)";
-      ctx.font = `900 22px ${fontHeadline}`;
-      const prefixW = ctx.measureText(ctaPrefix).width;
-      ctx.fillText(ctaPrefix, ctaTextX, ctaTextY);
-
-      const handleX = ctaTextX + Math.min(prefixW, ctaTextMaxW);
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
       ctx.fillStyle = cyberPurple;
-      ctx.font = `900 24px ${fontHeadline}`;
-      ctx.fillText(ctaHandle, handleX, ctaTextY);
-      const handleW = ctx.measureText(ctaHandle).width;
 
-      // underline @ragtechdev to make it pop
-      ctx.strokeStyle = cyberPurpleSoft;
-      ctx.lineWidth = 3;
-      ctx.beginPath();
-      ctx.moveTo(handleX, ctaTextY + 6);
-      ctx.lineTo(handleX + Math.min(handleW, ctaTextMaxW), ctaTextY + 6);
-      ctx.stroke();
+      let size = 38;
+      let urlLines: string[] = [quizUrl];
+      while (size > 18) {
+        const f = `900 ${size}px ${fontTech}`;
+        urlLines = wrapHard(quizUrl, ctaTextMaxW, f);
+        if (urlLines.length <= 3) {
+          ctx.font = f;
+          break;
+        }
+        size -= 2;
+      }
 
-      ctx.fillStyle = "rgba(0,0,0,0.88)";
-      ctx.font = `900 22px ${fontHeadline}`;
-      const suffixX = handleX + handleW;
-      ctx.fillText(ctaSuffix, suffixX, ctaTextY);
+      const centerX = ctaBoxX + ctaBoxW / 2;
+      const centerY = ctaBoxY + ctaBoxH / 2 + 8;
+      const lineGap = Math.max(30, Math.floor(size * 1.12));
+      const startY = centerY - ((urlLines.length - 1) * lineGap) / 2;
+      urlLines.slice(0, 3).forEach((ln, i) => {
+        ctx.fillText(ln, centerX, startY + i * lineGap);
+      });
 
-      const ctaUrlY = ctaBoxY + 60;
-      const ctaUrlFont = `900 24px ${fontTech}`;
-      ctx.font = ctaUrlFont;
-      const ctaUrlLines = wrapText(quizUrl, ctaTextMaxW, ctaUrlFont);
-      const ctaUrlText = ctaUrlLines[0] ?? quizUrl;
-      ctx.fillStyle = cyberPurple;
-      ctx.fillText(ctaUrlText, ctaTextX, ctaUrlY);
-
-      // underline the URL to make it feel like a link
-      const urlW = ctx.measureText(ctaUrlText).width;
-      ctx.strokeStyle = cyberPurpleSoft;
-      ctx.lineWidth = 3;
-      ctx.beginPath();
-      ctx.moveTo(ctaTextX, ctaUrlY + 6);
-      ctx.lineTo(ctaTextX + Math.min(urlW, ctaTextMaxW), ctaUrlY + 6);
-      ctx.stroke();
+      ctx.textAlign = "start";
+      ctx.textBaseline = "alphabetic";
 
       ctx.restore();
 
@@ -1004,11 +1017,24 @@ export default function DigitalParentQuizPage() {
       ctx.fillText("Every response helps us understand how parenting evolves with technology", safePad + 20, ctaY + 92);
 
       ctx.fillStyle = "rgba(255,255,255,1)";
-      ctx.font = `800 24px ${fontTech}`;
-      ctx.fillText("FUTURENET", safePad, H - 75);
-      ctx.fillStyle = "rgba(255,255,255,1)";
-      ctx.font = `600 22px ${fontTech}`;
-      ctx.fillText(quizUrl, safePad, H - 54);
+      {
+        let size = 30;
+        let lines: string[] = [quizUrl];
+        while (size > 20) {
+          const f = `700 ${size}px ${fontTech}`;
+          lines = wrapHard(quizUrl, headerW, f);
+          if (lines.length <= 2) {
+            ctx.font = f;
+            break;
+          }
+          size -= 2;
+        }
+
+        const baseY = H - 78;
+        const lineGap = Math.max(28, Math.floor(size * 1.05));
+        ctx.fillText(lines[0] ?? quizUrl, safePad, baseY);
+        if (lines.length > 1) ctx.fillText(lines[1], safePad, baseY + lineGap);
+      }
 
       ctx.save();
       ctx.globalAlpha = 0.12;
