@@ -4,7 +4,7 @@
 | Field | Notes |
 |-------|--------|
 | Stakeholder type | Expert (Youth Psychotherapist) |
-| Ethnic Background | |
+| Ethnic Background | Chinese |
 | Age group | Adult / Psychotherapist specializing in youth 17-24 years |
 | Interview date | Dec 30, 2025 |
 | Interviewer | Saloni, Eileen, Sugirdha |

@@ -13,6 +13,7 @@
 | P08 | Parent | SG young working mum (child 4); trust-based self-regulation; wants gentle boundary support + creative co-use |
 | E01 | Expert | NTT Docomo Kids Keitai product team; target ages 6–10 with transition in grades 4–6 |
 | E02 | Expert | Cyberlite (cybersafety education) founder; parent awareness gap; school-based education + AI literacy |
+| E03 | Expert | Youth psychotherapist (17–24 focus; SAF context); sees self-esteem/FOMO impacts; advocates balanced boundaries + co-use |
 | R01 | Regulator | No notes captured yet |
 | T01 | Teacher | No notes captured yet |
 | S01 | Student 9–12 | No notes captured yet |
@@ -31,6 +32,12 @@
 | Communication needs are real, but WhatsApp is a weak default | Families need school/social coordination; existing messaging lacks child-safety affordances and admin models (contacts, multi-caregiver, school hours). | “If there were a better, safer way to communicate, would definitely go for it.” (P01) |
 | Education + plain-language guidance is missing | Parents are aware-but-stuck: low usage of controls, jargon fatigue, and “incident-driven” attention; they need simple, non-condescending guidance. | “7% of parents actually use the parental controls in a useful way” (E02) |
 | AI literacy is emerging as a safety domain | Parents/schools worry about kids using AI for homework, bias/hallucination, and critical thinking; they want responsible-use education. | “Some parents are not using AI - But children already have used 100% AI” (E02) |
+| Social comparison + FOMO are mental-health risks (not just “screen time”) | Curated feeds drive inadequacy and pressure to stay constantly engaged; younger kids may not understand that feeds are not “real life.” | “Social comparison is a major issue” (E03) |
+| Early-child screens can displace sensory development and tolerance for boredom | Overstimulation and reduced real-world exploration are concerns in formative years; building comfort with boredom and offline play matters. | (E03) |
+| Online toxicity is amplified by anonymity; co-play helps parents see exposure | Competitive games and anonymous spaces normalize verbal abuse; parents need visibility into who kids interact with. | (E03) |
+| Co-use/co-play is a key safety strategy | Parents want to engage with kids in online activities, but need tools to facilitate this and reduce solo screen time. | (E03) |
+| Nature/offline alternatives are essential for balance | Parents want to encourage outdoor play, but need ideas and support for making this a sustainable part of family life. | (E03) |
+| Balanced approach to boundaries is crucial | Parents need to balance protection with autonomy, and want guidance on how to achieve this balance. | (E03) |
 
 ---
 
@@ -43,3 +50,6 @@
 - Content quality system: stimulation-aware recommendations, ad/UGC risk labeling, curated bundles
 - Incident-response playbooks (what kids do when they see something harmful) + parent-child “trust contract” rituals
 - Plain-language, research-backed education (screen time, cyber safety, AI literacy) designed for low attention + low jargon
+- Social comparison literacy ("curated life" explainers) + prompts toward real-world grounding
+- Family co-use/co-play modes (shared sessions; discussion prompts; lightweight visibility into interactions)
+- Offline alternative “swap” suggestions (nature/outdoor, low-stimulation activities) to reduce doomscrolling loops

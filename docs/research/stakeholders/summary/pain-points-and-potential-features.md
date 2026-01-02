@@ -29,6 +29,7 @@
   - P01: avoids YouTube; hates ads/algorithmic flow.
   - P07: distrust of “YouTube Kids”; “ads are sewage.”
   - P08: regrets early Cocomelon exposure.
+  - E03: screens can be overstimulating for young children and displace sensory development.
 - Impact:
   - Parents default to paid ecosystems or blanket bans; kids still get exposed via peers.
 - Primary personas:
@@ -36,11 +37,21 @@
   - Tech-Savvy Safety-Pragmatic Parent (P07)
   - Trust-Based Self-Regulation Parent (P08)
 
+### 3b) Social comparison + FOMO drive self-esteem harm
+- Evidence:
+  - E03: social comparison is a major issue; curated content warps self-esteem; pressure to stay engaged and keep up with trends.
+- Impact:
+  - Increased anxiety/inadequacy, compulsive checking, and difficulty sustaining healthier routines.
+- Primary personas:
+  - Teen transition parent (inferred)
+  - Digital Safety-Conscious Parent (P01)
+
 ### 4) Peer exposure and school context undermines home controls
 - Evidence:
   - P07: harmful memes spread via friends.
   - P06: school iPads; worries filters can be bypassed; kids using AI for homework.
   - E01: school policies shape in-school device use.
+  - E03: peer pressure affects kids and adults; pressure to keep up with trends.
 - Impact:
   - Parents feel they “can’t win”; pushes earlier smartphone adoption.
 - Primary personas:
@@ -53,6 +64,7 @@
   - P01: WhatsApp needed for school socializing; unknown messages appear; lack of controls.
   - P06/P07: coordination needs increase with commuting/after-school.
   - E01/P05: closed messaging is a core value for kids devices.
+  - E03: co-use (parent and child together) is often healthier than "phone babysitting".
 - Impact:
   - Parents accept risky tools for social inclusion and logistics.
 - Primary personas:
@@ -88,6 +100,15 @@
 - Primary personas:
   - Tech-Savvy Safety-Pragmatic Parent (P06)
   - Overwhelmed Working Parent (inferred)
+
+### 9) Online anonymity enables toxic behavior (esp. games)
+- Evidence:
+  - E03: online games can be toxic/competitive with verbal abuse; anonymity enables harmful behavior.
+- Impact:
+  - Normalization of harassment, emotional distress, and harder-to-monitor social risk.
+- Primary personas:
+  - Gaming kid/teen parent (inferred)
+  - Tech-Savvy Safety-Pragmatic Parent (P06)
 
 ---
 
@@ -136,6 +157,7 @@
   - Roles and admin: both parents as admins; caregiver roles.
   - Classroom-safe modes (read-only during school; after-school window).
   - Anti-spam/unknown inbound protections.
+  - Co-use mode: parent+child shared session prompts for first-time chats/adding contacts.
 - Target personas:
   - P01, P05, P07
 
@@ -157,8 +179,31 @@
   - “Stimulation score” for content (fast cuts, autoplay loops).
   - Curated bundles by age + values (creative tools, calm media).
   - Preference for paid/ad-free where possible.
+  - Offline “swap” suggestions (nature/outdoor, sensory play) when high-stimulation patterns are detected.
 - Target personas:
   - P01, P07, P08, P03
+
+### I) Social comparison / FOMO resilience kit
+- Addresses:
+  - Pain point 3b (social comparison + FOMO)
+  - Pain point 2 (decision fatigue)
+- Feature ideas:
+  - Plain-language explainers for kids: curated feeds vs real life (age-adapted).
+  - “Grounding prompts” and gentle nudges to step away after comparison-heavy sessions.
+  - Optional reflection prompts ("How did this make you feel?") with parent discussion starters.
+- Target personas:
+  - Teen transition parent (inferred)
+  - Digital Safety-Conscious Parent (P01)
+
+### J) Co-play visibility for online games
+- Addresses:
+  - Pain point 9 (toxic/anonymity-driven behavior)
+  - Pain point 2 (monitoring burden)
+- Feature ideas:
+  - Co-play sessions (parent joins/observes) and simplified post-session summaries (who they played with, report/block actions taken).
+  - Quick-access safety actions: mute, block, report with kid-friendly explanations.
+- Target personas:
+  - Gaming kid/teen parent (inferred)
 
 ### G) Incident-response playbooks for kids (skill building)
 - Addresses:
