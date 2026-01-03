@@ -24,6 +24,8 @@ type SendQuizEmailBody = {
     type?: "parent" | "expecting" | "considering" | "na" | null;
     researchOptIn?: boolean;
     birthYear?: number | null;
+    nationality?: string[] | null;
+    ethnicity?: string[] | null;
     gender?: "m" | "w" | "na" | null;
     kidsAges?: string[] | null;
   };

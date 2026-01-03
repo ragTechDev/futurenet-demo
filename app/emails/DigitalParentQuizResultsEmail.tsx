@@ -30,6 +30,8 @@ export type DigitalParentQuizResultsPayload = {
     type?: "parent" | "expecting" | "considering" | "na" | null;
     researchOptIn?: boolean;
     birthYear?: number | null;
+    nationality?: string[] | null;
+    ethnicity?: string[] | null;
     gender?: "m" | "w" | "na" | null;
     kidsAges?: string[] | null;
   } | null;
@@ -604,6 +606,8 @@ export default function DigitalParentQuizResultsEmail(props: DigitalParentQuizRe
                   respondent_type: payload?.respondent?.type ?? null,
                   research_opt_in: payload?.respondent?.researchOptIn ?? null,
                   birth_year: payload?.respondent?.birthYear ?? null,
+                  nationality: payload?.respondent?.nationality ?? null,
+                  ethnicity: payload?.respondent?.ethnicity ?? null,
                   gender: payload?.respondent?.gender ?? null,
                   kids_ages: payload?.respondent?.kidsAges ?? null,
                   })}
