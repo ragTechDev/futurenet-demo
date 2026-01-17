@@ -13,7 +13,7 @@
 ---
 
 ## Key Discussion Points
-### Current Behaviors
+### Overview / Current Context
 - Account executive at Cloudflare working across financial services, critical infrastructure, and schools
 - Schools are the most excited industry about Cloudflare products
 - Works with K-12 schools (Kindergarten to high school)
@@ -24,18 +24,17 @@
 - Talks extensively with other parents about cybersecurity and smart devices
 
 ### Pain Points / Frustrations
-- **MDM bypass issues**: Students in Singapore can bypass/disable MDM systems on school devices
+- **MDM bypass issues**: Sugirdha shared students in Singapore can bypass/disable MDM systems on school devices
 - **Network-only filtering limitations**: Traditional filters only work on school network, not at home
 - **VPN bypass**: Traditional firewalls (like Palo Alto) can be bypassed by VPNs
 - **Personal device gap**: Students' personal devices don't have web filters
 - **Parental tech literacy**: Parents who are not tech savvy just rely on school devices
 - **Device management complexity**: Schools have existing setups with physical networks and routers
 - **Divided school approaches**: Some schools only care about filtering on school network, others want comprehensive protection
-- **Self-harm content**: Described as "school nightmare scenario"
 - **Parenting reality vs ideal**: Ideal screen time is 1 hour, reality is 2-3 hours when both parents working
 - **Phone attention guilt**: 3-year-old says "Daddy put phone in pocket" when parent is distracted
 
-### Desired Features / Needs
+### Current Cloudflare Web Filter Capabilities
 - **Device-level deployment**: Agent installed on device itself, not just network layer
 - **Works everywhere**: Filtering that works both on and off school premises, regardless of network
 - **Cannot be bypassed**: VPN-proof filtering that students cannot disable
