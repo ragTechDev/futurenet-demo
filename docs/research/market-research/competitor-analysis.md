@@ -3,6 +3,7 @@
 This document synthesizes competitor devices researched in `docs/research/market-research/`:
 
 - Japan: **KDDI mamorino watch**, **NTT Docomo Kids Keitai (KY-41C / SK-41D)**
+- Korea: **Kiwi Plus (LG U+ Kids Phone / KiwiPlay+)**
 - UK: **Karri Messenger**, **Sage Mobile (Sage iPhone)**
 - US: **BoT Talk**, **WisePhone (Techless)**
 
@@ -27,11 +28,14 @@ It also maps **unfilled gaps** against discovery interview pain points in:
 ```mermaid
 flowchart TB
   A["Kids Safety + Communication Market"] --> J["Japan: Telco-integrated kids lines"]
+  A --> K["Korea: Telco kids smartphones + character UX"]
   A --> W["West UK-US: DTC subscription devices"]
   A --> T["West UK-US: Screen-free GPS + voice"]
 
   J --> J1["KDDI mamorino watch<br/>- voice call + SMS<br/>- preset contacts<br/>- GPS + distance alarm<br/>- security buzzer"]
   J --> J2["Docomo Kids Keitai<br/>- no browser/apps<br/>- whitelisted contacts<br/>- GPS Imadoco<br/>- SOS buzzer<br/>- remote ring/auto-answer"]
+
+  K --> K1["Kiwi Plus / LG U+ Kids Phone<br/>- Samsung A-series base<br/>- character-themed UX<br/>- KiwiPlay+ guardian app<br/>- AI harmful content detection<br/>- location + safe zones"]
 
   T --> T1["BoT Talk<br/>- GPS + voice messages<br/>- LTE-M<br/>- geofencing<br/>- AI supervision"]
   T --> T2["Karri<br/>- voice messenger<br/>- GPS + geofence<br/>- integrated SIM<br/>- roaming"]
@@ -67,7 +71,20 @@ flowchart TB
 - parents will pay subscriptions,
 - and differentiation is through **attention protection** (no social/browser) rather than telco-level governance.
 
-### 2.3 Singapore relevance (from existing JP file notes)
+### 2.3 Korea (telco + character IP + “guardian app” as the product)
+
+**Pattern**: Korea’s kids phone category shows a distinct playbook:
+
+- **Telco-led distribution** (e.g., LG U+), using mainstream Android hardware
+- Heavy use of **licensed character IP** and themed UX (e.g., Kakao characters)
+- A strong **guardian + kid app pair** (KiwiPlay+) that blends:
+  - safety (contacts, harmful content detection)
+  - oversight (usage time, remote controls)
+  - engagement loops (rewards, habits, diaries)
+
+**Implication**: Compared to Japan’s “closed keitai” approach, Korea’s model is closer to a **managed smartphone with a kid-first shell**, where the enforcement layer and parent UX are the differentiator.
+
+### 2.4 Singapore relevance (from existing JP file notes)
 
 From the Docomo Kids Keitai doc’s Singapore mapping:
 
@@ -108,6 +125,8 @@ From the Docomo Kids Keitai doc’s Singapore mapping:
   - BoT Talk: GNSS + Wi-Fi + cell positioning + motion AI; irregularity detection.
 - **Voice-first kid-to-kid social layer (without screens)**
   - Karri: multi chat channels; KARRI-to-KARRI voice.
+- **Character-led “kids smartphone” with guardian app + engagement loops (Korea)**
+  - Kiwi Plus / LG U+: character-themed UX; guardian app pairing; app usage management; remote controls; rewards/habit features; AI harmful content detection.
 - **Curated app ecosystems (healthy smartphone)**
   - Sage: 150+ approved apps (includes WhatsApp, Life360, Notion, Claude, etc.).
   - WisePhone: curated “Tool Drawer” concept (currently paused vetting process per doc).
@@ -122,6 +141,7 @@ From the Docomo Kids Keitai doc’s Singapore mapping:
 |---|---|---|---:|---:|---|
 | KDDI mamorino watch | JP | Kids watch/phone | (not specified) | **¥998/month** plan | Location features may require additional paid service (Security Navi). |
 | Docomo Kids Keitai | JP | Kids phone / wearable | (not specified) | **¥550/month** plan + **¥220/month** Imadoco Search | Total typical: ¥770/month for full location + comms. |
+| Kiwi Plus / LG U+ Kids Phone (Moono / Choonsik) | KR | Telco kids smartphone + guardian app | (not specified) | (not specified) | Samsung Galaxy A-series base models; character themes; KiwiPlay+ guardian app; AI harmful content detection; location + safe zones; remote controls. |
 | Karri Messenger 1/2 | UK | Screen-free voice messenger + GPS | £39.99–£49.99 sale (RRP £59.99–£89.99) | **£2.49–£3.99/month** membership tiers | Higher tiers add GPS + more channels + roaming. |
 | BoT Talk | US | Screen-free GPS + voice | **$59.99** | **$4.99–$6.99/month** | LTE-M; battery varies by plan mode. |
 | WisePhone | US | Healthy smartphone | **$399** (open box $359) | Plan starts **$24.99/month** (plus subscription concept) | BYOC or Techless carrier plan; curated apps optional. |
@@ -148,6 +168,7 @@ quadrantChart
   "Karri" : [0.25, 0.32]
   "KDDI mamorino" : [0.45, 0.22]
   "Docomo Kids Keitai" : [0.55, 0.20]
+  "Kiwi Plus / LG U+ Kids Phone" : [0.72, 0.35]
   "WisePhone" : [0.78, 0.72]
   "Sage iPhone" : [0.86, 0.68]
 ```
@@ -169,6 +190,7 @@ quadrantChart
   "KDDI mamorino" : [0.22, 0.75]
   "BoT Talk" : [0.10, 0.70]
   "Karri" : [0.12, 0.65]
+  "Kiwi Plus / LG U+ Kids Phone" : [0.60, 0.50]
   "WisePhone" : [0.55, 0.55]
   "Sage iPhone" : [0.65, 0.55]
 ```
@@ -490,6 +512,16 @@ A strong wedge could be:
 - No browser, no app store; whitelisted contacts.
 - Strong “contactability assurance”: auto-answer, force ring/max volume, silent-mode controls.
 - Pricing: ¥550/month kids plan + optional Imadoco Search ¥220/month.
+
+### Kiwi Plus / LG U+ Kids Phone (KR)
+
+- “Kids smartphone” model using mainstream Samsung Galaxy A-series hardware (e.g., A17/A24) with a kid-themed experience.
+- Strong pairing between kids phone and **KiwiPlay+ guardian app**, including:
+  - location tracking and safe zone alerts
+  - usage time management + remote controls
+  - AI detection for harmful messages/images (as described)
+  - habit/reward loops (stickers, diaries, “free mode coupons”)
+- Heavy use of licensed character IP and themed UX (e.g., Kakao characters).
 
 ### Karri (UK)
 
